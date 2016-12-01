@@ -58,4 +58,14 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('classes');
 	}
+
+	public function login(){
+		$this->load->helper('url');
+		$this->load->view('login');
+	}
+
+	public function registration(){
+		$this->load->helper('url');
+		$this->load->view('registration');
+	}
 }

@@ -59,3 +59,5 @@ $route['contact'] = 'welcome/contact';
 $route['about-us'] = 'welcome/about';
 $route['programs'] = 'welcome/programs';
 $route['classes'] = 'welcome/classes';
+$route['login'] = 'welcome/login';
+$route['registration'] = 'welcome/registration';

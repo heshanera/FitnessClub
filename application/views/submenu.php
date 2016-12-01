@@ -46,6 +46,9 @@
                     <li title="Search" class="pm_tip_static_bottom">
                         <a href="#" id="pm-search-btn"><i class="fa fa-search"></i></a>
                     </li>
+                    <li title="login" class="pm_tip_static_bottom">
+                        <a href="<?php echo base_url(); ?>login"><i class="fa fa-users"></i></a>
+                    </li>
                 </ul>
             </div>
 
