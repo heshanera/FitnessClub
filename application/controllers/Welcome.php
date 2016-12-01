@@ -58,4 +58,80 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('classes');
 	}
+	
+	public function admin(){
+		$this->load->helper('url');
+		$this->load->view('admin-index');
+	}
+	
+	public function adminCalendar(){
+		$this->load->helper('url');
+		$this->load->view('admin-basic-calendar');
+	}
+	
+	public function adminGallery(){
+		$this->load->helper('url');
+		$this->load->view('admin-basic-gallery');
+	}
+	
+	public function adminMessages(){
+		$this->load->helper('url');
+		$this->load->view('admin-basic-messages');
+	}
+	
+	public function adminProfile(){
+		$this->load->helper('url');
+		$this->load->view('admin-basic-profile');
+	}
+	
+	public function adminSearch(){
+		$this->load->helper('url');
+		$this->load->view('admin-basic-search-results');
+	}
+	
+	public function adminChart1(){
+		$this->load->helper('url');
+		$this->load->view('admin-charts-d3');
+	}
+	
+	public function adminChart2(){
+		$this->load->helper('url');
+		$this->load->view('admin-charts-flot');
+	}
+	
+	public function adminChart3(){
+		$this->load->helper('url');
+		$this->load->view('admin-charts-highcharts');
+	}
+	
+	public function adminClients(){
+		$this->load->helper('url');
+		$this->load->view('admin-sales-stats-clients');
+	}
+	
+	public function adminGeneralSettings(){
+		$this->load->helper('url');
+		$this->load->view('admin-sales-stats-general-settings');
+	}
+	
+	public function adminProducts(){
+		$this->load->helper('url');
+		$this->load->view('admin-sales-stats-products');
+	}
+	
+	public function adminPurchases(){
+		$this->load->helper('url');
+		$this->load->view('admin-sales-stats-purchases');
+	}
+	
+	public function adminDashboard(){
+		$this->load->helper('url');
+		$this->load->view('admin-dashboard2');
+	}
+	
+	
+	
+	
+	
+	
 }

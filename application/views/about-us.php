@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.html">
 
-    <title>ENERGY :: Premium Fitness Template</title>
+    <title>Fitness Club</title>
     
     
     
