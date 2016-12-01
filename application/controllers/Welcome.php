@@ -23,4 +23,39 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('index');
 	}
+
+	public function gallery(){
+		$this->load->helper('url');
+		$this->load->view('gallery');
+	}
+
+	public function store(){
+		$this->load->helper('url');
+		$this->load->view('store');
+	}
+
+	public function schedules(){
+		$this->load->helper('url');
+		$this->load->view('schedules');
+	}
+
+	public function contact(){
+		$this->load->helper('url');
+		$this->load->view('contact');
+	}
+
+	public function about(){
+		$this->load->helper('url');
+		$this->load->view('about-us');
+	}
+
+	public function programs(){
+		$this->load->helper('url');
+		$this->load->view('programs');
+	}
+
+	public function classes(){
+		$this->load->helper('url');
+		$this->load->view('classes');
+	}
 }

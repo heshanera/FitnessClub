@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | This is not exactly a route, but allows you to automatically route
 | controller and method names that contain dashes. '-' isn't a valid
-| class or method name character, so it requires translation.
+| class or method name character, so it requires translationk.
 | When you set this option to TRUE, it will replace ALL dashes in the
 | controller and method URI segments.
 |
@@ -52,3 +52,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['gallery'] = 'welcome/gallery';
+$route['schedules'] = 'welcome/schedules';
+$route['store'] = 'welcome/store';
+$route['contact'] = 'welcome/contact';
+$route['about-us'] = 'welcome/about';
+$route['programs'] = 'welcome/programs';
+$route['classes'] = 'welcome/classes';
