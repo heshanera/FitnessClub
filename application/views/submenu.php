@@ -168,7 +168,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
 
                 <div class="pm-header-logo-container">
-                    <a href="http://<?php echo base_url(); ?>"><img src="http://<?php echo base_url(); ?>img/energy-fitness.png" class="img-responsive pm-header-logo" alt="Energy Fitness Studio"></a>
+                    <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>img/energy-fitness.png" class="img-responsive pm-header-logo" alt="Energy Fitness Studio"></a>
                 </div>
 
                 <div class="pm-header-mobile-btn-container">                        </div>
@@ -177,36 +177,35 @@
             <div class="col-lg-8 col-md-8 col-sm-8 pm-main-menu">
 
                 <nav class="navbar-collapse collapse" id="pm-main-navigation">
-
                     <ul class="sf-menu pm-nav">
 
-                        <li><a href="http://<?php echo base_url(); ?>about-us">About us</a></li>
+                        <li><a href="<?php echo base_url(); ?>about-us">About us</a></li>
                         <li>
-                            <a href="http://<?php echo base_url(); ?>programs">Programs</a>
+                            <a href="<?php echo base_url(); ?>programs">Programs</a>
                             <ul>
-                                <li><a href="http://<?php echo base_url(); ?>programs">Sport Specific</a></li>
-                                <li><a href="http://<?php echo base_url(); ?>programs">Nutritional Guidance</a></li>
-                                <li><a href="http://<?php echo base_url(); ?>programs">Personal training</a></li>
-                                <li><a href="http://<?php echo base_url(); ?>programs">Cardio training</a></li>
-                                <li><a href="http://<?php echo base_url(); ?>programs">Endurance training</a></li>
+                                <li><a href="<?php echo base_url(); ?>programs">Sport Specific</a></li>
+                                <li><a href="<?php echo base_url(); ?>programs">Nutritional Guidance</a></li>
+                                <li><a href="<?php echo base_url(); ?>programs">Personal training</a></li>
+                                <li><a href="<?php echo base_url(); ?>programs">Cardio training</a></li>
+                                <li><a href="<?php echo base_url(); ?>programs">Endurance training</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="http://<?php echo base_url(); ?>classes">Classes</a>
+                            <a href="<?php echo base_url(); ?>classes">Classes</a>
                             <ul>
                                 <li>
-                                    <a href="http://<?php echo base_url(); ?>classes">Kick-boxing</a>
+                                    <a href="<?php echo base_url(); ?>classes">Kick-boxing</a>
                                 </li>
-                                <li><a href="http://<?php echo base_url(); ?>classes">Yoga</a></li>
-                                <li><a href="http://<?php echo base_url(); ?>classes">Pilates</a></li>
-                                <li><a href="http://<?php echo base_url(); ?>classes">Zumba</a></li>
-                                <li><a href="http://<?php echo base_url(); ?>classes">Spin Master</a></li>
+                                <li><a href="<?php echo base_url(); ?>classes">Yoga</a></li>
+                                <li><a href="<?php echo base_url(); ?>classes">Pilates</a></li>
+                                <li><a href="<?php echo base_url(); ?>classes">Zumba</a></li>
+                                <li><a href="<?php echo base_url(); ?>classes">Spin Master</a></li>
                             </ul>
                         </li>
-                        <li><a href="http://<?php echo base_url(); ?>schedules">Schedules</a></li>
-                        <li><a href="http://<?php echo base_url(); ?>index.php/Welcome/gallery">Gallery</a></li>
-                        <li><a href="http://<?php echo base_url(); ?>store">Store</a></li>
-                        <li><a href="http://<?php echo base_url(); ?>contact">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>schedules">Schedules</a></li>
+                        <li><a href="<?php echo base_url(); ?>gallery">Gallery</a></li>
+                        <li><a href="<?php echo base_url(); ?>store">Store</a></li>
+                        <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
 
                     </ul>
 
@@ -220,76 +219,3 @@
 
 </header>
 <!-- /Main navigation -->
-
-<!-- SLIDER AREA -->
-
-<div class="pm-pulse-container" id="pm-pulse-container">
-
-    <div id="pm-pulse-loader">
-        <img src="http://<?php echo base_url(); ?>js/pulse/img/ajax-loader.gif" alt="slider loading" />
-    </div>
-
-    <div id="pm-slider" class="pm-slider">
-
-        <div id="pm-slider-progress-bar"></div>
-
-        <ul class="pm-slides-container" id="pm_slides_container">
-
-            <!-- FULL WIDTH slides -->
-            <li data-thumb="http://<?php echo base_url(); ?>img/slider/slide1.jpg" class="pmslide_0"><img src="http://<?php echo base_url(); ?>img/slider/slide1.jpg" alt="img01" />
-
-                <div class="pm-holder-bg">
-                    <div class="pm-holder">
-                        <div class="pm-caption">
-                            <h1><span>unleash</span> your inner <span>strength</span></h1>
-                                      <span class="pm-caption-decription">
-                                        discover your physical potential with energy fitness
-                                      </span>
-                            <a href="http://<?php echo base_url(); ?>about-us" class="pm-slide-btn">learn more about us</a>
-                        </div>
-                    </div>
-                </div>
-
-            </li>
-
-            <li data-thumb="http://<?php echo base_url(); ?>img/slider/slide2.jpg" class="pmslide_1"><img src="http://<?php echo base_url(); ?>img/slider/slide2.jpg" alt="img02" />
-
-                <div class="pm-holder-bg">
-                    <div class="pm-holder">
-                        <div class="pm-caption">
-                            <h1><span>increase</span> your muscle <span>power</span></h1>
-                                      <span class="pm-caption-decription">
-                                        learn the secrects of resistance training
-                                      </span>
-                            <a href="#" class="pm-slide-btn">View program</a>
-                        </div>
-                    </div>
-                </div>
-
-            </li>
-
-            <li data-thumb="http://<?php echo base_url(); ?>img/slider/slide3.jpg" class="pmslide_2"><img src="http://<?php echo base_url(); ?>img/slider/slide3.jpg" alt="img02" />
-
-                <div class="pm-holder-bg">
-                    <div class="pm-holder">
-                        <div class="pm-caption">
-                            <h1><span>going</span> the <span>distance</span></h1>
-                                      <span class="pm-caption-decription">
-                                        an effective cardio program can take you there
-                                      </span>
-                            <a href="#" class="pm-slide-btn">Discover Cardio secrets</a>
-                        </div>
-                    </div>
-                </div>
-
-            </li>
-
-        </ul>
-
-    </div>
-
-    <div class="pm-pulse-arrow"></div>
-
-</div>
-
-<!-- SLIDER AREA end -->

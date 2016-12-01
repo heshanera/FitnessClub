@@ -11,56 +11,56 @@
 
     <title>ENERGY :: Premium Fitness Template</title>
     
-    <link href="http://<?php echo base_url(); ?>bootstrap3/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>bootstrap3/css/bootstrap.css" rel="stylesheet">
 
     <!-- main css -->
-    <link href="http://<?php echo base_url(); ?>css/master.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/master.css" rel="stylesheet">
     
     <!-- mobile css -->
-    <link href="http://<?php echo base_url(); ?>css/responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/responsive.css" rel="stylesheet">
     
     <!-- FontAwesome Support -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>css/fontawesome/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/fontawesome/font-awesome.min.css" />
     <!-- FontAwesome Support -->
     
     <!-- Superfish menu -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>css/superfish/superfish.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/superfish/superfish.css" />
     <!-- Superfish menu -->
     
     <!-- Theme Color selector -->
-    <link href="http://<?php echo base_url(); ?>js/theme-color-selector/theme-color-selector.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>js/theme-color-selector/theme-color-selector.css" type="text/css" rel="stylesheet">
     <!-- Theme Color selector -->
     
     <!-- Owl Carousel -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/owl-carousel/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/owl-carousel/owl.carousel.css" />
     <!-- Owl Carousel -->
     
     <!-- Typicons -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>css/typicons/typicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/typicons/typicons.min.css" />
     <!-- Typicons -->
     
     <!-- WOW animations -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/wow/css/libs/animate.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/wow/css/libs/animate.css" />
     <!-- WOW animations -->
     
     <!-- Pulse Slider -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/pulse/pm-slider.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/pulse/pm-slider.css" />
     <!-- Pulse Slider -->
     
     <!-- MeanMenu (mobile) -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/meanmenu/meanmenu.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/meanmenu/meanmenu.css" />
     <!-- MeanMenu (mobile) -->
     
     <!-- Flexslider -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/flexslider/flexslider-post.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/flexslider/flexslider-post.css" />
     <!-- Flexslider -->
     
     <!-- PrettyPhoto -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/prettyphoto/css/prettyPhoto.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/prettyphoto/css/prettyPhoto.css" />
     <!-- PrettyPhoto -->
         
     <!-- Development Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700%7COpen+Sans:400,800italic,800,700italic,700,600italic,400italic,300italic,300,600%7COswald:400,300,700%7CLato:400,900,900italic,700italic,400italic,700,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
+    <link href='fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700%7COpen+Sans:400,800italic,800,700italic,700,600italic,400italic,300italic,300,600%7COswald:400,300,700%7CLato:400,900,900italic,700italic,400italic,700,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
     <!-- Development Google Fonts -->
     
   </head>
@@ -76,7 +76,78 @@
     	<?php require_once ("submenu.php") ;?>
         <!-- /Sub-header -->
         
-        
+        <!-- SLIDER AREA -->
+
+        <div class="pm-pulse-container" id="pm-pulse-container">
+
+            <div id="pm-pulse-loader">
+                <img src="<?php echo base_url(); ?>js/pulse/img/ajax-loader.gif" alt="slider loading" />
+            </div>
+
+            <div id="pm-slider" class="pm-slider">
+
+                <div id="pm-slider-progress-bar"></div>
+
+                <ul class="pm-slides-container" id="pm_slides_container">
+
+                    <!-- FULL WIDTH slides -->
+                    <li data-thumb="<?php echo base_url(); ?>img/slider/slide1.jpg" class="pmslide_0"><img src="<?php echo base_url(); ?>img/slider/slide1.jpg" alt="img01" />
+
+                        <div class="pm-holder-bg">
+                            <div class="pm-holder">
+                                <div class="pm-caption">
+                                    <h1><span>unleash</span> your inner <span>strength</span></h1>
+                                              <span class="pm-caption-decription">
+                                                discover your physical potential with energy fitness
+                                              </span>
+                                    <a href="<?php echo base_url(); ?>about-us" class="pm-slide-btn">learn more about us</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <li data-thumb="<?php echo base_url(); ?>img/slider/slide2.jpg" class="pmslide_1"><img src="<?php echo base_url(); ?>img/slider/slide2.jpg" alt="img02" />
+
+                        <div class="pm-holder-bg">
+                            <div class="pm-holder">
+                                <div class="pm-caption">
+                                    <h1><span>increase</span> your muscle <span>power</span></h1>
+                                              <span class="pm-caption-decription">
+                                                learn the secrects of resistance training
+                                              </span>
+                                    <a href="#" class="pm-slide-btn">View program</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <li data-thumb="<?php echo base_url(); ?>img/slider/slide3.jpg" class="pmslide_2"><img src="<?php echo base_url(); ?>img/slider/slide3.jpg" alt="img02" />
+
+                        <div class="pm-holder-bg">
+                            <div class="pm-holder">
+                                <div class="pm-caption">
+                                    <h1><span>going</span> the <span>distance</span></h1>
+                                              <span class="pm-caption-decription">
+                                                an effective cardio program can take you there
+                                              </span>
+                                    <a href="#" class="pm-slide-btn">Discover Cardio secrets</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="pm-pulse-arrow"></div>
+
+        </div>
+
+        <!-- SLIDER AREA end -->
         
         <!-- BODY CONTENT starts here -->
         
@@ -86,7 +157,7 @@
             
             	<!-- Column 1 -->
                 <div class="col-lg-4 col-md-4 col-sm-12 pm-container-border desktop pm-center pm-columnPadding-30 pm-column-spacing wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="50" data-wow-duration="1s">
-                	<img src="http://<?php echo base_url(); ?>img/home/icon1.png" class="img-responsive pm-inline" alt="icon" />
+                	<img src="<?php echo base_url(); ?>img/home/icon1.png" class="img-responsive pm-inline" alt="icon" />
                     
                     <h6 class="pm-column-title">personal training</h6>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sem ut nisl auctor, sit amet auctor tortor mollis. Aliquam nibh elit, tincidunt sit amet orci ac, pellentesque pretium mi.</p>
@@ -99,7 +170,7 @@
                 <!-- Column 2 -->
                 <div class="col-lg-4 col-md-4 col-sm-12 pm-container-border desktop pm-center pm-columnPadding-30 pm-column-spacing wow fadeInUp animated
 " data-wow-delay="0.6s" data-wow-offset="50" data-wow-duration="1s">
-                	<img src="http://<?php echo base_url(); ?>img/home/icon2.png" class="img-responsive pm-inline" alt="icon" />
+                	<img src="<?php echo base_url(); ?>img/home/icon2.png" class="img-responsive pm-inline" alt="icon" />
                     
                     <h6 class="pm-column-title">sport specific programs</h6>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sem ut nisl auctor, sit amet auctor tortor mollis. Aliquam nibh elit, tincidunt sit amet orci ac, pellentesque pretium mi.</p>
@@ -111,7 +182,7 @@
                 
                 <!-- Column 3 -->
                 <div class="col-lg-4 col-md-4 col-sm-12 pm-center pm-columnPadding-30 wow fadeInUp animated " data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
-                	<img src="http://<?php echo base_url(); ?>img/home/icon3.png" class="img-responsive pm-inline" alt="icon" />
+                	<img src="<?php echo base_url(); ?>img/home/icon3.png" class="img-responsive pm-inline" alt="icon" />
                     
                     <h6 class="pm-column-title">special classes</h6>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sem ut nisl auctor, sit amet auctor tortor mollis. Aliquam nibh elit, tincidunt sit amet orci ac, pellentesque pretium mi.</p>
@@ -336,7 +407,7 @@
                         <div class="flexslider pm-post-slider" id="pm-flexslider-home">
                         	<ul class="slides">
                             	<li>
-                                	<img src="http://<?php echo base_url(); ?>img/home/flexslider1.jpg" alt="Slide 1" />
+                                	<img src="<?php echo base_url(); ?>img/home/flexslider1.jpg" alt="Slide 1" />
                                     
                                     <div class="pm-flexslider-details">
                                     	<p class="title">power training</p>
@@ -346,7 +417,7 @@
                                     
                                 </li>
                                 <li>
-                                	<img src="http://<?php echo base_url(); ?>img/home/flexslider2.jpg" alt="Slide 2" />
+                                	<img src="<?php echo base_url(); ?>img/home/flexslider2.jpg" alt="Slide 2" />
                                     
                                      <div class="pm-flexslider-details">
                                     	<p class="title">Kick-Boxing</p>
@@ -356,7 +427,7 @@
                                     
                                 </li>
                                 <li>
-                                	<img src="http://<?php echo base_url(); ?>img/home/flexslider3.jpg" alt="Slide 2" />
+                                	<img src="<?php echo base_url(); ?>img/home/flexslider3.jpg" alt="Slide 2" />
                                     
                                      <div class="pm-flexslider-details">
                                     	<p class="title">Bootcamp</p>
@@ -611,21 +682,21 @@ data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
                             	<p class="pm-testimonial-quote">"the trainers and staff at Energy fitness were fantastic and really helped me <b>achieve my fitness goals</b>"</p>
                                 <p class="pm-testimonial-name">dave johnson / computer engineer</p>
                                 <div class="pm-testimonial-img">
-                                	<img src="http://<?php echo base_url(); ?>img/home/testimonial-1.png" alt="Testimonial 1" />
+                                	<img src="<?php echo base_url(); ?>img/home/testimonial-1.png" alt="Testimonial 1" />
                                 </div>
                             </li>
                             <li>
                             	<p class="pm-testimonial-quote">"the staff and trainers at Energy fitness are simply <b>amazing and well educated</b>"</p>
                                 <p class="pm-testimonial-name">chloe johnson / HR Specialist</p>
                                 <div class="pm-testimonial-img">
-                                	<img src="http://<?php echo base_url(); ?>img/home/testimonial-2.png" alt="Testimonial 2" />
+                                	<img src="<?php echo base_url(); ?>img/home/testimonial-2.png" alt="Testimonial 2" />
                                 </div>
                             </li>
                             <li>
                             	<p class="pm-testimonial-quote">"The 1 on 1 personal training and kick-boxing programs at Energy is simply <b>second to none</b>."</p>
                                 <p class="pm-testimonial-name">erica smith / nurse</p>
                                 <div class="pm-testimonial-img">
-                                	<img src="http://<?php echo base_url(); ?>img/home/testimonial-3.png" alt="Testimonial 2" />
+                                	<img src="<?php echo base_url(); ?>img/home/testimonial-3.png" alt="Testimonial 2" />
                                 </div>
                             </li>
                         </ul>
@@ -664,28 +735,28 @@ data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
                     <div id="pm-brands-carousel" class="owl-carousel owl-theme">
                         <div class="pm-brand-item">
                         	<span></span>
-                            <a href="http://www.google.com/" target="_blank">www.avgsport.com</a>
-                   	    	<img src="http://<?php echo base_url(); ?>img/home/client-carousel1.jpg" width="263" height="67" alt="AVG Sport"> 
+                            <a href="www.google.com/" target="_blank">www.avgsport.com</a>
+                   	    	<img src="<?php echo base_url(); ?>img/home/client-carousel1.jpg" width="263" height="67" alt="AVG Sport"> 
                         </div>
                         <div class="pm-brand-item">
                         	<span></span>
-                            <a href="http://www.google.com/" target="_blank">www.easton.com</a>
-                   	    	<img src="http://<?php echo base_url(); ?>img/home/client-carousel2.jpg" width="263" height="67" alt="Easton"> 
+                            <a href="www.google.com/" target="_blank">www.easton.com</a>
+                   	    	<img src="<?php echo base_url(); ?>img/home/client-carousel2.jpg" width="263" height="67" alt="Easton"> 
                         </div>
                         <div class="pm-brand-item">
                         	<span></span>
-                            <a href="http://www.google.com/" target="_blank">www.healthandfitness.com</a>
-                   	    	<img src="http://<?php echo base_url(); ?>img/home/client-carousel3.jpg" width="263" height="67" alt="Health and Fitness"> 
+                            <a href="www.google.com/" target="_blank">www.healthandfitness.com</a>
+                   	    	<img src="<?php echo base_url(); ?>img/home/client-carousel3.jpg" width="263" height="67" alt="Health and Fitness"> 
                         </div>
                         <div class="pm-brand-item">
                         	<span></span>
-                            <a href="http://www.google.com/" target="_blank">www.lululemon.com</a>
-                   	    	<img src="http://<?php echo base_url(); ?>img/home/client-carousel4.jpg" width="263" height="67" alt="Lululemon"> 
+                            <a href="www.google.com/" target="_blank">www.lululemon.com</a>
+                   	    	<img src="<?php echo base_url(); ?>img/home/client-carousel4.jpg" width="263" height="67" alt="Lululemon"> 
                         </div>
                         <div class="pm-brand-item">
                         	<span></span>
-                            <a href="http://www.google.com/" target="_blank">www.fitnessexperience.com</a>
-                   	    	<img src="http://<?php echo base_url(); ?>img/home/client-carousel5.jpg" width="263" height="67" alt="Fitness Experience"> 
+                            <a href="www.google.com/" target="_blank">www.fitnessexperience.com</a>
+                   	    	<img src="<?php echo base_url(); ?>img/home/client-carousel5.jpg" width="263" height="67" alt="Fitness Experience"> 
                         </div>
                     </div>
                     <!-- carousel end -->
@@ -826,8 +897,8 @@ data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 pm-footer-copyright-col">
-                    	<a href=""><img src="http://<?php echo base_url(); ?>img/energy-fitness.png" class="img-responsive pm-header-logo" alt="Energy Fitness Studio"></a> 
-                        <p>© 2014 Energy - Designed &amp; Developed by <a href="http://www.pulsarmedia.ca/" target="_blank">Pulsar Media</a></p>
+                    	<a href=""><img src="<?php echo base_url(); ?>img/energy-fitness.png" class="img-responsive pm-header-logo" alt="Energy Fitness Studio"></a> 
+                        <p>© 2014 Energy - Designed &amp; Developed by <a href="www.pulsarmedia.ca/" target="_blank">Pulsar Media</a></p>
                     </div>
                 </div>
             </div>
@@ -839,28 +910,28 @@ data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://<?php echo base_url(); ?>js/jquery-2.1.3.min.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.viewport.mini.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.easing.1.3.js"></script>
-    <script src="http://<?php echo base_url(); ?>bootstrap3/js/bootstrap.min.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/modernizr.custom.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/owl-carousel/owl.carousel.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/main.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.tooltip.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.hoverPanel.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/superfish/superfish.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/superfish/hoverIntent.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/stellar/jquery.stellar.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/theme-color-selector/theme-color-selector.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/pulse/jquery.PMSlider.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/meanmenu/jquery.meanmenu.min.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/flexslider/jquery.flexslider.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.testimonials.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/wow/wow.min.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery-migrate-1.1.1.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/prettyphoto/js/jquery.prettyPhoto.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/ajax-trial-form/ajax-trial-form.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/twitter-post-fetcher/twitterFetcher_min.js"></script>    
+    <script src="<?php echo base_url(); ?>js/jquery-2.1.3.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.viewport.mini.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.easing.1.3.js"></script>
+    <script src="<?php echo base_url(); ?>bootstrap3/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/modernizr.custom.js"></script>
+    <script src="<?php echo base_url(); ?>js/owl-carousel/owl.carousel.js"></script>
+    <script src="<?php echo base_url(); ?>js/main.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.tooltip.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.hoverPanel.js"></script>
+    <script src="<?php echo base_url(); ?>js/superfish/superfish.js"></script>
+    <script src="<?php echo base_url(); ?>js/superfish/hoverIntent.js"></script>
+    <script src="<?php echo base_url(); ?>js/stellar/jquery.stellar.js"></script>
+    <script src="<?php echo base_url(); ?>js/theme-color-selector/theme-color-selector.js"></script>
+    <script src="<?php echo base_url(); ?>js/pulse/jquery.PMSlider.js"></script>
+    <script src="<?php echo base_url(); ?>js/meanmenu/jquery.meanmenu.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/flexslider/jquery.flexslider.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.testimonials.js"></script>
+    <script src="<?php echo base_url(); ?>js/wow/wow.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery-migrate-1.1.1.js"></script>
+    <script src="<?php echo base_url(); ?>js/prettyphoto/js/jquery.prettyPhoto.js"></script>
+    <script src="<?php echo base_url(); ?>js/ajax-trial-form/ajax-trial-form.js"></script>
+    <script src="<?php echo base_url(); ?>js/twitter-post-fetcher/twitterFetcher_min.js"></script>    
     <!--<p id="back-top" class="visible-lg visible-md visible-sm"> </p>-->
     
   </body>

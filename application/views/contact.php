@@ -11,56 +11,56 @@
 
     <title>ENERGY :: Premium Fitness Template</title>
     
-    <link href="http://<?php echo base_url(); ?>bootstrap3/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>bootstrap3/css/bootstrap.css" rel="stylesheet">
 
     <!-- main css -->
-    <link href="http://<?php echo base_url(); ?>css/master.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/master.css" rel="stylesheet">
     
     <!-- mobile css -->
-    <link href="http://<?php echo base_url(); ?>css/responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/responsive.css" rel="stylesheet">
     
     <!-- FontAwesome Support -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>css/fontawesome/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/fontawesome/font-awesome.min.css" />
     <!-- FontAwesome Support -->
     
     <!-- Superfish menu -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>css/superfish/superfish.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/superfish/superfish.css" />
     <!-- Superfish menu -->
     
     <!-- Theme Color selector -->
-    <link href="http://<?php echo base_url(); ?>js/theme-color-selector/theme-color-selector.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>js/theme-color-selector/theme-color-selector.css" type="text/css" rel="stylesheet">
     <!-- Theme Color selector -->
     
     <!-- Owl Carousel -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/owl-carousel/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/owl-carousel/owl.carousel.css" />
     <!-- Owl Carousel -->
     
     <!-- Typicons -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>css/typicons/typicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/typicons/typicons.min.css" />
     <!-- Typicons -->
     
     <!-- WOW animations -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/wow/css/libs/animate.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/wow/css/libs/animate.css" />
     <!-- WOW animations -->
     
     <!-- Pulse Slider -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/pulse/pm-slider.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/pulse/pm-slider.css" />
     <!-- Pulse Slider -->
     
     <!-- MeanMenu (mobile) -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/meanmenu/meanmenu.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/meanmenu/meanmenu.css" />
     <!-- MeanMenu (mobile) -->
     
     <!-- Flexslider -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/flexslider/flexslider-post.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/flexslider/flexslider-post.css" />
     <!-- Flexslider -->
     
     <!-- PrettyPhoto -->
-    <link rel="stylesheet" type="text/css" href="http://<?php echo base_url(); ?>js/prettyphoto/css/prettyPhoto.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/prettyphoto/css/prettyPhoto.css" />
     <!-- PrettyPhoto -->
         
     <!-- Development Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700%7COpen+Sans:400,800italic,800,700italic,700,600italic,400italic,300italic,300,600%7COswald:400,300,700%7CLato:400,900,900italic,700italic,400italic,700,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
+    <link href='fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700%7COpen+Sans:400,800italic,800,700italic,700,600italic,400italic,300italic,300,600%7COswald:400,300,700%7CLato:400,900,900italic,700italic,400italic,700,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
     <!-- Development Google Fonts -->
     
   </head>
@@ -76,6 +76,35 @@
     
     	<!-- Sub-Menu -->
     	<?php require_once ("submenu.php");?>
+        
+        <!-- SUB-HEADER -->
+        
+        <div class="pm-sub-header-container">
+        
+        	<div class="pm-sub-header-title-container">
+            
+            	<div class="pm-sub-header-title-bg">
+                
+                	<p class="pm-sub-header-title">Contact</p>
+                	<p class="pm-sub-header-message">HAVE A QUESTION? GET IN TOUCH WITH US</p>
+                
+                </div>
+                
+                <div class="pm-sub-header-breadcrumbs">
+                
+                	<div class="pm-sub-header-breadcrumb-bg"></div>
+                    
+                    <div class="pm-sub-header-breadcrumb-list-container">
+                    	<ul class="pm-sub-header-breadcrumb-list">
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                
+                </div>
+                
+            </div>
+        
+        </div>
         
         <!-- BODY CONTENT starts here -->
         
@@ -140,7 +169,7 @@
         <!-- PANEL 1 end -->
         
         <!-- PANEL 2 -->
-        <div class="pm-column-container pm-containerMargin60 pm-parallax-panel" style="background-color:#000; background-image:url(http://<?php echo base_url(); ?>img/contact/form-bg2.jpg);" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+        <div class="pm-column-container pm-containerMargin60 pm-parallax-panel" style="background-color:#000; background-image:url(<?php echo base_url(); ?>img/contact/form-bg2.jpg);" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
         
         	<div class="container pm-containerPadding100">
             
@@ -230,7 +259,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                         	<div class="pm_captcha_box">
                             	<p>Security Code:</p>
-                                <img src="http://<?php echo base_url(); ?>js/ajax-contact/CaptchaSecurityImagesbb55.jpg?width=125&amp;height=50&amp;characters=5" /><br />
+                                <img src="<?php echo base_url(); ?>js/ajax-contact/CaptchaSecurityImagesbb55.jpg?width=125&amp;height=50&amp;characters=5" /><br />
                                 <div style="padding-top:2px;"><input class="pm_s_security_code pm-form-textfield" name="security_code" type="text" id="security_code" maxlength="5" /></div>
                             </div>
                         </div>
@@ -339,17 +368,17 @@
                         <div class="pm-fat-footer-title-divider"></div>
                         
                         <ul class="pm-gallery-widget-items">
-                        	<li style="background-image:url(http://<?php echo base_url(); ?>img/gallery-widget/img1.jpg);">
-                            	<a href="http://<?php echo base_url(); ?>img/gallery-widget/img1-lg.jpg" data-rel="prettyPhoto[gallery-widget]" class="pm-gallery-widget-item-expand fa fa-expand expand lightbox"></a>
+                        	<li style="background-image:url(<?php echo base_url(); ?>img/gallery-widget/img1.jpg);">
+                            	<a href="<?php echo base_url(); ?>img/gallery-widget/img1-lg.jpg" data-rel="prettyPhoto[gallery-widget]" class="pm-gallery-widget-item-expand fa fa-expand expand lightbox"></a>
                             </li>
-                            <li style="background-image:url(http://<?php echo base_url(); ?>img/gallery-widget/img2.jpg);">
-                            	<a href="http://<?php echo base_url(); ?>img/gallery-widget/img2-lg.jpg" data-rel="prettyPhoto[gallery-widget]" class="pm-gallery-widget-item-expand fa fa-expand expand lightbox"></a>
+                            <li style="background-image:url(<?php echo base_url(); ?>img/gallery-widget/img2.jpg);">
+                            	<a href="<?php echo base_url(); ?>img/gallery-widget/img2-lg.jpg" data-rel="prettyPhoto[gallery-widget]" class="pm-gallery-widget-item-expand fa fa-expand expand lightbox"></a>
                             </li>
-                            <li style="background-image:url(http://<?php echo base_url(); ?>img/gallery-widget/img3.jpg);">
-                            	<a href="http://<?php echo base_url(); ?>img/gallery-widget/img3-lg.jpg" data-rel="prettyPhoto[gallery-widget]" class="pm-gallery-widget-item-expand fa fa-expand expand lightbox"></a>
+                            <li style="background-image:url(<?php echo base_url(); ?>img/gallery-widget/img3.jpg);">
+                            	<a href="<?php echo base_url(); ?>img/gallery-widget/img3-lg.jpg" data-rel="prettyPhoto[gallery-widget]" class="pm-gallery-widget-item-expand fa fa-expand expand lightbox"></a>
                             </li>
-                            <li style="background-image:url(http://<?php echo base_url(); ?>img/gallery-widget/img4.jpg);">
-                            	<a href="http://<?php echo base_url(); ?>img/gallery-widget/img4-lg.jpg" data-rel="prettyPhoto[gallery-widget]" class="pm-gallery-widget-item-expand fa fa-expand expand lightbox"></a>
+                            <li style="background-image:url(<?php echo base_url(); ?>img/gallery-widget/img4.jpg);">
+                            	<a href="<?php echo base_url(); ?>img/gallery-widget/img4-lg.jpg" data-rel="prettyPhoto[gallery-widget]" class="pm-gallery-widget-item-expand fa fa-expand expand lightbox"></a>
                             </li>
                         </ul>
                         
@@ -410,7 +439,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 pm-footer-copyright-col">
                     	<a href=""><img src="img/energy-fitness.png" class="img-responsive pm-header-logo" alt="Energy Fitness Studio"></a>
-                        <p>© 2014 Energy - Designed &amp; Developed by <a href="http://www.pulsarmedia.ca/" target="_blank">Pulsar Media</a></p>
+                        <p>© 2014 Energy - Designed &amp; Developed by <a href="www.pulsarmedia.ca/" target="_blank">Pulsar Media</a></p>
                     </div>
                 </div>
             </div>
@@ -422,28 +451,28 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://<?php echo base_url(); ?>js/jquery-2.1.3.min.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.viewport.mini.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.easing.1.3.js"></script>
-    <script src="http://<?php echo base_url(); ?>bootstrap3/js/bootstrap.min.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/modernizr.custom.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/owl-carousel/owl.carousel.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/main.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.tooltip.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.hoverPanel.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/superfish/superfish.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/superfish/hoverIntent.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/stellar/jquery.stellar.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/theme-color-selector/theme-color-selector.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/pulse/jquery.PMSlider.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/meanmenu/jquery.meanmenu.min.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/flexslider/jquery.flexslider.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery.testimonials.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/wow/wow.min.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/jquery-migrate-1.1.1.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/prettyphoto/js/jquery.prettyPhoto.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/ajax-trial-form/ajax-trial-form.js"></script>
-    <script src="http://<?php echo base_url(); ?>js/twitter-post-fetcher/twitterFetcher_min.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery-2.1.3.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.viewport.mini.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.easing.1.3.js"></script>
+    <script src="<?php echo base_url(); ?>bootstrap3/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/modernizr.custom.js"></script>
+    <script src="<?php echo base_url(); ?>js/owl-carousel/owl.carousel.js"></script>
+    <script src="<?php echo base_url(); ?>js/main.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.tooltip.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.hoverPanel.js"></script>
+    <script src="<?php echo base_url(); ?>js/superfish/superfish.js"></script>
+    <script src="<?php echo base_url(); ?>js/superfish/hoverIntent.js"></script>
+    <script src="<?php echo base_url(); ?>js/stellar/jquery.stellar.js"></script>
+    <script src="<?php echo base_url(); ?>js/theme-color-selector/theme-color-selector.js"></script>
+    <script src="<?php echo base_url(); ?>js/pulse/jquery.PMSlider.js"></script>
+    <script src="<?php echo base_url(); ?>js/meanmenu/jquery.meanmenu.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/flexslider/jquery.flexslider.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.testimonials.js"></script>
+    <script src="<?php echo base_url(); ?>js/wow/wow.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery-migrate-1.1.1.js"></script>
+    <script src="<?php echo base_url(); ?>js/prettyphoto/js/jquery.prettyPhoto.js"></script>
+    <script src="<?php echo base_url(); ?>js/ajax-trial-form/ajax-trial-form.js"></script>
+    <script src="<?php echo base_url(); ?>js/twitter-post-fetcher/twitterFetcher_min.js"></script>
     <!--<p id="back-top" class="visible-lg visible-md visible-sm"> </p>-->
     
   </body>
