@@ -59,6 +59,8 @@ $route['contact'] = 'welcome/contact';
 $route['about-us'] = 'welcome/about';
 $route['programs'] = 'welcome/programs';
 $route['classes'] = 'welcome/classes';
+$route['login'] = 'welcome/login';
+$route['registration'] = 'welcome/registration';
 
 $route['admin'] = 'Welcome/admin';
 $route['admin-basic-calendar'] = 'Welcome/adminCalendar';
