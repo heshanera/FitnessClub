@@ -173,8 +173,7 @@
 
                 <div class="pm-header-mobile-btn-container">                        </div>
 
-            </div>
-
+            </div>   
             <div class="col-lg-8 col-md-8 col-sm-8 pm-main-menu">
 
                 <nav class="navbar-collapse collapse" id="pm-main-navigation">
@@ -205,7 +204,7 @@
                             </ul>
                         </li>
                         <li><a href="http://<?php echo base_url(); ?>schedules">Schedules</a></li>
-                        <li><a href="http://<?php echo base_url(); ?>gallery">Gallery</a></li>
+                        <li><a href="http://<?php echo base_url(); ?>index.php/Welcome/gallery">Gallery</a></li>
                         <li><a href="http://<?php echo base_url(); ?>store">Store</a></li>
                         <li><a href="http://<?php echo base_url(); ?>contact">Contact</a></li>
 

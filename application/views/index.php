@@ -110,8 +110,7 @@
                 <!-- Column 2 end -->
                 
                 <!-- Column 3 -->
-                <div class="col-lg-4 col-md-4 col-sm-12 pm-center pm-columnPadding-30 wow fadeInUp animated
-" data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
+                <div class="col-lg-4 col-md-4 col-sm-12 pm-center pm-columnPadding-30 wow fadeInUp animated " data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
                 	<img src="http://<?php echo base_url(); ?>img/home/icon3.png" class="img-responsive pm-inline" alt="icon" />
                     
                     <h6 class="pm-column-title">special classes</h6>
@@ -173,7 +172,7 @@
                             
                             	<form action="#" method="post" id="pm-trial-form">
                                 
-                                	<input name="pm_trial_form_name" id="pm_trial_form_name" type="text" class="pm-trial-form-field" placeholder="Your Name *">
+                                    <input name="pm_trial_form_name" id="pm_trial_form_name" type="text" class="pm-trial-form-field" placeholder="Your Name *">
                                     <input name="pm_trial_form_email" id="pm_trial_form_email" type="email" class="pm-trial-form-field" placeholder="Email Address *">
                                     <input name="pm_trial_form_phone" type="tel" class="pm-trial-form-field" placeholder="Phone Number">
                                     <textarea name="pm_trial_form_message" class="pm-trial-form-textarea" placeholder="Message"></textarea>
@@ -553,7 +552,9 @@ data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
                             <li><p>Towel Service</p></li>
                         </ul>
                         
-                        <a href="#" class="pm-pricing-table-btn pm-primary">Purchase Plan &nbsp;<i class="fa fa-angle-right"></i></a>
+                        <a href="#" class="pm-pricing-t
+                           <!-- Main navigation -->
+                           le-btn pm-primary">Purchase Plan &nbsp;<i class="fa fa-angle-right"></i></a>
                         
                     </div>
                     <!-- Pricing Table end -->
@@ -577,7 +578,7 @@ data-wow-delay="0.9s" data-wow-offset="50" data-wow-duration="1s">
                         </div>
                         
                         <ul class="pm-pricing-table-list">
-                        	<li><p>Access To Gym</p></li>
+                            <li><p>Access To Gym</p></li>
                             <li><p>10 Personal Training Sessions</p></li>
                             <li><p>Access to Classes</p></li>
                             <li><p>Access to Programs</p></li>
