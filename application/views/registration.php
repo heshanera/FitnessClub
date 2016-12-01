@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.html">
 
-    <title>ENERGY :: Premium Fitness Template</title>
+    <title>Fitness Club</title>
     
     <link href="<?php echo base_url(); ?>bootstrap3/css/bootstrap.css" rel="stylesheet">
 
@@ -161,7 +161,7 @@
                         </div>
 
                     </div>
-
+                    <br><br>
                     <div class="row pm-column-spacing">
                         <div class="col-lg-12 col-md-12 col-sm-12">
 
@@ -189,7 +189,7 @@
                             </select>
                         </div>
                     </div>
-
+                    <br><br>
                     <div class="row pm-column-spacing">
                         <div class="col-lg-12 col-md-12 col-sm-12">
 
@@ -220,73 +220,15 @@
 
                 </div>
 
-                <div class="pm-container-arrow"></div>
+                
 
         </div>
         <br><br>
         
-                        
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                        	<div class="pm_captcha_box">
-                            	<p>Security Code:</p>
-                                <img src="<?php echo base_url(); ?>js/ajax-contact/CaptchaSecurityImagesbb55.jpg?width=125&amp;height=50&amp;characters=5" /><br />
-                                <div style="padding-top:2px;"><input class="pm_s_security_code pm-form-textfield" name="security_code" type="text" id="security_code" maxlength="5" /></div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-12 col-md-12 col-sm-12 pm-center">
-                            <input type="button" value="Submit Form" name="pm-form-submit-btn" class="pm-form-submit-btn" id="pm-contact-form-btn">
-                            <div id="pm-contact-form-response"></div>
-                            <p class="pm-required">Fields marked with * are required</p>
-                        </div>
-                        
-                        <input type="hidden" name="pm_s_email_address_contact" value="info@pulsarmedia.ca" />
-                    
-                    </form>
-                
-                	
-                
-                </div>
-            
-            </div>
-            
-            <div class="pm-container-arrow"></div>
+                       
         
         </div>
-        <!-- PANEL 2 end-->
         
-        <!-- PANEL 3 -->
-        <div class="container pm-containerPadding60">
-        	
-            <div class="row">
-            	<div class="col-lg-12 col-md-12 col-sm-12 pm-center">
-                	
-                    <h5 class="body">PRIMary LOCATION</h5>
-					<h4 class="body">Gampaha area</h4>
-                    <div class="pm-diamond-divider">
-                    	<div class="pm-diamond"></div>
-                        <div class="pm-diamond"></div>
-                        <div class="pm-diamond"></div>
-                    </div>
-                    
-                </div>
-            </div>
-        
-        	<div class="row pm-containerPadding-top-30">
-            	<div class="col-lg-12 col-md-12 col-sm-12 pm-center">
-                	<p>1 STREET</p>
-                    <p>ADRRESS LINE 1, LINE 2</p>
-                    <p>LINE 3</p>
-                </div>
-            </div>
-                     
-        </div>
-
-        <section id="canvas1" class="map">
-			 <iframe id="map_canvas1" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJrYmb8ntZ4joR_Sgb5l8swbM&key=AIzaSyBH30O2MBNp25dE-pWtiLX9bijFR49VYN0" width="1170" height="400" frameborder="0" style="border: 0"></iframe>
-		</section>
-        
-        <!-- PANEL 4 end -->
         
         
         <!-- BODY CONTENT end -->

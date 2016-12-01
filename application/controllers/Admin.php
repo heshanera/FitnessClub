@@ -25,9 +25,8 @@ class Admin extends CI_Controller {
 		//$this->load->view('admin-index');
 	}
 	
-	/*
-	public function admin(){
-		$this->load->helper('url');
-		$this->load->view('admin-index');
-	}*/
+	
+	public function login(){
+		
+	}
 }
