@@ -5503,6 +5503,7 @@ button.close {
   position: relative;
   width: auto;
   margin: 10px;
+  z-index: 1040;
 }
 .modal-content {
   position: relative;
@@ -5522,6 +5523,7 @@ button.close {
   right: 0;
   left: 0;
   background-color: #000;
+  z-index: 1030;
 }
 .modal-backdrop.fade {
   filter: alpha(opacity=0);
