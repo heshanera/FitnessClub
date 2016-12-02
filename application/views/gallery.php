@@ -108,430 +108,94 @@
         <!-- BODY CONTENT starts here -->
         
        	<!-- PANEL 1 -->
-        <div class="container pm-containerPadding-bottom-60">
-        
-        	<div class="row">
-            	<div class="col-lg-12">
-                	
-                    <ul class="pm-isotope-filter-system">
-                    	<li class="pm-isotope-filter-system-expand">Currently viewing <i class="fa fa-angle-down"></i>
-                        </li>
-                    	<li><a href="#">All</a></li>
-                        <li><a href="#">Fitness</a></li>
-                        <li><a href="#">Exercise</a></li>
-                        <li><a href="#">Equipment</a></li>
-                        <li><a href="#">Cardio</a></li>
-                    </ul>
-                    
-                </div>
-            </div>
-        
-        </div>
+<!--        <div class="container pm-containerPadding-bottom-60">-->
+<!--        -->
+<!--        	<div class="row">-->
+<!--            	<div class="col-lg-12">-->
+<!--                	-->
+<!--                    <ul class="pm-isotope-filter-system">-->
+<!--                    	<li class="pm-isotope-filter-system-expand">Currently viewing <i class="fa fa-angle-down"></i>-->
+<!--                        </li>-->
+<!--                    	<li><a href="#">All</a></li>-->
+<!--                        <li><a href="#">Fitness</a></li>-->
+<!--                        <li><a href="#">Exercise</a></li>-->
+<!--                        <li><a href="#">Equipment</a></li>-->
+<!--                        <li><a href="#">Cardio</a></li>-->
+<!--                    </ul>-->
+<!--                    -->
+<!--                </div>-->
+<!--            </div>-->
+<!--        -->
+<!--        </div>-->
         <!-- PANEL 1 end -->
         
         <!-- PANEL 2 -->
         <div class="container pm-containerPadding-bottom-60">
         
         	<div class="row">
-            
-            	<!-- Gallery post 1 -->
-            	<div class="col-lg-3 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post1.jpg);">
-                    
+                <?php
+                $conn = null;
+                try{
+                    $conn = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","b5931a4eeccf92","1841dc47","fitnessclub");
+                }catch (mysqli_sql_exception $e){
+                    echo "Error occured";
+                    die();
+                }
+
+                if ($conn == null) {
+                    echo "Error occured";
+                    die();
+                }
+                $sql = "SELECT * FROM gallery_items WHERE publish=1;";
+                $res = mysqli_query($conn,$sql);
+                $count = 1;
+                while ($row_qt =  mysqli_fetch_assoc($res)){
+
+
+                ?>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="pm-gallery-post-container" style="background-image:url(<?php echo base_url(); ?>assets/img/gallery/<?php echo $row_qt['image'];?>);">
+
                         <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
+                            <p><?php echo $row_qt['title']?></p>
                             <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
                         </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
+
+<!--                        <div class="pm-gallery-post-like-diamond-shadow"></div>-->
+<!--                        <div class="pm-gallery-post-like-diamond"></div>-->
                         <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>25</span>
-                        </div>
-                        
+<!--                        <div class="pm-gallery-post-like-counter">-->
+<!--                            <span>16</span>-->
+<!--                        </div>-->
+
                         <div class="pm-gallery-post-gradient"></div>
-                        
+
                         <div class="pm-gallery-post-details">
-                        	
+
                             <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
+
+                                <p><?php echo $row_qt['description']?><p>
                             </div>
-                            
+
                             <div class="pm-gallery-post-details-diamond-shadow"></div>
                             <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post1.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
+                            <a href="<?php echo base_url(); ?>assets/img/gallery/<?php echo $row_qt['image'];?>" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
+
                             <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
+                                <li>
+                                    <a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
                                 </li>
                                 <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
                             </ul>
-                            
+
                         </div>
-                    
+
                     </div>
-                    
                 </div>
-                <!-- Gallery post 1 end -->
-                
-                <!-- Gallery post 2 -->
-            	<div class="col-lg-6 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post2.jpg);">
-                    
-                        <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
-                            <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
-                        </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
-                        <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>81</span>
-                        </div>
-                        
-                        <div class="pm-gallery-post-gradient"></div>
-                        
-                        <div class="pm-gallery-post-details">
-                        	
-                            <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
-                            </div>
-                            
-                            <div class="pm-gallery-post-details-diamond-shadow"></div>
-                            <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post2.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
-                            <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
-                                </li>
-                                <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
-                            </ul>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </div>
-                <!-- Gallery post 2 end -->
-                
-                <!-- Gallery post 3 -->
-            	<div class="col-lg-3 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post3.jpg);">
-                    
-                        <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
-                            <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
-                        </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
-                        <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>9</span>
-                        </div>
-                        
-                        <div class="pm-gallery-post-gradient"></div>
-                        
-                        <div class="pm-gallery-post-details">
-                        	
-                            <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
-                            </div>
-                            
-                            <div class="pm-gallery-post-details-diamond-shadow"></div>
-                            <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post3.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
-                            <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
-                                </li>
-                                <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
-                            </ul>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </div>
-                <!-- Gallery post 3 end -->
-                
-                
-                <!-- Gallery post 4 -->
-            	<div class="col-lg-4 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post4.jpg);">
-                    
-                        <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
-                            <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
-                        </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
-                        <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>16</span>
-                        </div>
-                        
-                        <div class="pm-gallery-post-gradient"></div>
-                        
-                        <div class="pm-gallery-post-details">
-                        	
-                            <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
-                            </div>
-                            
-                            <div class="pm-gallery-post-details-diamond-shadow"></div>
-                            <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post4.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
-                            <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
-                                </li>
-                                <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
-                            </ul>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </div>
-                <!-- Gallery post 4 end -->  
-                
-                
-                <!-- Gallery post 5 -->
-            	<div class="col-lg-4 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post5.jpg);">
-                    
-                        <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
-                            <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
-                        </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
-                        <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>37</span>
-                        </div>
-                        
-                        <div class="pm-gallery-post-gradient"></div>
-                        
-                        <div class="pm-gallery-post-details">
-                        	
-                            <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
-                            </div>
-                            
-                            <div class="pm-gallery-post-details-diamond-shadow"></div>
-                            <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post5.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
-                            <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
-                                </li>
-                                <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
-                            </ul>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </div>
-                <!-- Gallery post 5 end -->
-                
-                
-                <!-- Gallery post 6 -->
-            	<div class="col-lg-4 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post6.jpg);">
-                    
-                        <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
-                            <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
-                        </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
-                        <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>45</span>
-                        </div>
-                        
-                        <div class="pm-gallery-post-gradient"></div>
-                        
-                        <div class="pm-gallery-post-details">
-                        	
-                            <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
-                            </div>
-                            
-                            <div class="pm-gallery-post-details-diamond-shadow"></div>
-                            <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post6.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
-                            <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
-                                </li>
-                                <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
-                            </ul>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </div>
-                <!-- Gallery post 6 end -->  
-                                
-                <!-- Gallery post 7 -->
-            	<div class="col-lg-3 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post7.jpg);">
-                    
-                        <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
-                            <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
-                        </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
-                        <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>25</span>
-                        </div>
-                        
-                        <div class="pm-gallery-post-gradient"></div>
-                        
-                        <div class="pm-gallery-post-details">
-                        	
-                            <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
-                            </div>
-                            
-                            <div class="pm-gallery-post-details-diamond-shadow"></div>
-                            <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post7.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
-                            <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
-                                </li>
-                                <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
-                            </ul>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </div>
-                <!-- Gallery post 7 end -->
-                
-                <!-- Gallery post 8 -->
-            	<div class="col-lg-6 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post8.jpg);">
-                    
-                        <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
-                            <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
-                        </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
-                        <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>81</span>
-                        </div>
-                        
-                        <div class="pm-gallery-post-gradient"></div>
-                        
-                        <div class="pm-gallery-post-details">
-                        	
-                            <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
-                            </div>
-                            
-                            <div class="pm-gallery-post-details-diamond-shadow"></div>
-                            <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post8.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
-                            <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
-                                </li>
-                                <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
-                            </ul>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </div>
-                <!-- Gallery post 8 end -->
-                
-                <!-- Gallery post 9 -->
-            	<div class="col-lg-3 col-md-6 col-sm-12">
-                	
-                    <div class="pm-gallery-post-container" style="background-image:url(img/gallery/post9.jpg);">
-                    
-                        <div class="pm-gallery-post-title-container">
-                            <p>lorem ipsum</p>
-                            <a href="#" class="pm-expand-gallery-post fa fa-expand"></a>
-                        </div>
-                        
-                        <div class="pm-gallery-post-like-diamond-shadow"></div>
-                        <div class="pm-gallery-post-like-diamond"></div>
-                        <a href="#" class="pm-gallery-post-like-btn fa fa-thumbs-up"></a>
-                        <div class="pm-gallery-post-like-counter">
-                            <span>9</span>
-                        </div>
-                        
-                        <div class="pm-gallery-post-gradient"></div>
-                        
-                        <div class="pm-gallery-post-details">
-                        	
-                            <div class="pm-gallery-post-details-excerpt">
-                            
-                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere efficitur augue, id rutrum mi venenatis vel. Donec vel dui libero <a href="#">[...]</a></p>
-                            </div>
-                            
-                            <div class="pm-gallery-post-details-diamond-shadow"></div>
-                            <div class="pm-gallery-post-details-diamond"></div>
-                            <a href="img/gallery/post9.jpg" data-rel="prettyPhoto[gallery]" class="pm-gallery-post-view-btn fa fa-camera expand lightbox"></a>
-                            
-                            <ul class="pm-gallery-post-details-actions">
-                            	<li>
-                                	<a href="#" class="pm-gallery-post-close fa fa-chevron-left"></a>
-                                </li>
-                                <li><a href="#" class="pm-gallery-post-view-more">View post</a></li>
-                            </ul>
-                            
-                        </div>
-                    
-                    </div>
-                    
-                </div>
-                <!-- Gallery post 9 end -->
+
+                <?php }?>
                 
             </div>
         

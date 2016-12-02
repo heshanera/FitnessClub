@@ -77,6 +77,15 @@
             </div>
         </header>
         <!-- /Topbar -->
+        <?php if($paramater == "success"){?>
+                <div class="alert alert-success">
+                    <strong>Success!</strong> The new gallery item added to the system.
+                </div>
+        <?php }elseif($paramater == "error"){?>
+                <div class="alert alert-danger">
+                    <strong>Failed!</strong> Unable to add the new gallery item added to the system.
+                </div>
+        <?php }?>
 
         <section id="content" class="table-layout animated fadeIn">
 
@@ -130,7 +139,7 @@
                     <?php
                     $conn = null;
                     try{
-                        $conn = mysqli_connect("localhost","root","mysqler","fitnessclub");
+                        $conn = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","b5931a4eeccf92","1841dc47","fitnessclub");
                     }catch (mysqli_sql_exception $e){
                         echo "Error occured";
                         die();
@@ -273,6 +282,46 @@
         </div>
     </div>
 </div>
+
+<script>
+    function publish(x) {
+        var chk = document.getElementById("chk_"+x);
+        var d = 0;
+        if (chk.checked){
+            d = 1;
+        }
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if(this.responseText !="success"){
+                    chk.checked = !chk.checked;
+                    alert("Failed to set value : " +  this.responseText );
+                }
+            }
+        };
+        xhttp.open("POST", "modifysettings/publish/"+x+"/"+d, true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send();
+    }
+
+    function drop(x) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if(this.responseText !="success"){
+                    alert("Failed to set value : "  +  this.responseText );
+                }else{
+                    location.reload();
+                }
+            }
+        };
+        xhttp.open("POST", "modifysettings/drop/"+x, true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send();
+    }
+
+
+</script>
 </body>
 
 

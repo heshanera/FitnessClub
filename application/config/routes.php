@@ -64,6 +64,9 @@ $route['registration'] = 'welcome/registration';
 
 $route['admin'] = 'Welcome/admin';
 $route['admin-basic-calendar'] = 'Welcome/adminCalendar';
+$route['admin-basic-gallery/(:any)'] = "Welcome/adminGallery/$1";
+$route['admin-basic-gallery/modifysettings/publish/(:any)/(:num)'] = "Welcome/modifysettings/publish/$1/$2";
+$route['admin-basic-gallery/modifysettings/drop/(:num)'] = "Welcome/modifysettings/drop/$1";
 $route['admin-basic-gallery'] = 'Welcome/adminGallery';
 $route['admin-basic-messages'] = 'Welcome/adminMessages';
 $route['admin-basic-profile'] = 'Welcome/adminProfile';

@@ -79,9 +79,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin-basic-calendar');
 	}
 	
-	public function adminGallery(){
+	public function adminGallery($paramater=null){
+		$data = array("paramater"=>$paramater);
 		$this->load->helper('url');
-		$this->load->view('admin-basic-gallery');
+		$this->load->view('admin-basic-gallery',$data);
 	}
 	
 	public function adminMessages(){
@@ -142,12 +143,12 @@ class Welcome extends CI_Controller {
 	public function submitgalleryitem(){
 		$this->load->helper('url');
 		function diewithhonour($s = 0){
-			echo 'error'.$s;
+			header('Location: '.base_url().'admin-basic-gallery/error');
 			die("");
 		}
 		$conn = null;
 		try{
-			$conn = mysqli_connect("localhost","root","mysqler","fitnessclub");
+			$conn = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","b5931a4eeccf92","1841dc47","fitnessclub");
 		}catch (mysqli_sql_exception $e){
 			diewithhonour();
 		}
@@ -222,7 +223,8 @@ class Welcome extends CI_Controller {
 		$sql = "INSERT INTO gallery_items (title, description, publish,image) VALUES ('$title', '$desc', $publish,'$target_file')";
 
 		if ($conn->query($sql) === TRUE && $uploadOk==1) {
-			echo "ok";
+			header('Location: '.base_url().'admin-basic-gallery/success');
+			die();
 		} else {
 			if ($uploadOk != 1){
 				diewithhonour(3);
@@ -231,6 +233,71 @@ class Welcome extends CI_Controller {
 
 			}
 		}
+	}
+
+	public function modifysettings($code=null,$id=null,$value=0){
+		$conn = null;
+		try{
+			$conn = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","b5931a4eeccf92","1841dc47","fitnessclub");
+		}catch (mysqli_sql_exception $e){
+			echo "Error occured";
+			die();
+		}
+
+		if ($conn == null) {
+			echo "Error occured";
+			die();
+		}
+
+		if ($code=="publish") {
+			if ($id != null) {
+				$sql = "SELECT * FROM gallery_items WHERE gallery_item_id=" . mysqli_escape_string($conn, $id);
+				$res = mysqli_query($conn, $sql);
+				if (mysqli_num_rows($res)) {
+					if ($id != null) {
+						$sql = "UPDATE gallery_items SET publish=" . $value. " WHERE gallery_item_id=" . $id;
+						$res = mysqli_query($conn, $sql);
+						if ($conn->query($sql) === TRUE) {
+							echo "success";
+						} else {
+							echo "E1x04";
+						}
+					} else {
+						echo "E1x03";
+					}
+				} else {
+					echo "E1x02";
+				}
+
+			} else {
+				echo "E1x01";
+			}
+		}else if ($code=="drop"){
+			if ($id != null) {
+				$sql = "SELECT * FROM gallery_items WHERE gallery_item_id=" . mysqli_escape_string($conn, $id);
+				$res = mysqli_query($conn, $sql);
+				if (mysqli_num_rows($res)) {
+					$fn = mysqli_fetch_assoc($res);
+					$sql = "DELETE FROM gallery_items WHERE gallery_item_id=" . $id;
+					$res = mysqli_query($conn, $sql);
+					if ($conn->query($sql) === TRUE) {
+						unlink("assets/img/gallery/".$fn['image']);
+						echo "success";
+					} else {
+						echo "E2x04";
+					}
+				} else {
+					echo "E2x02";
+				}
+
+			} else {
+				echo "E2x01";
+			}
+
+		}else{
+			echo $code;
+		}
+
 	}
 	
 	
