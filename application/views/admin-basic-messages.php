@@ -737,52 +737,7 @@
         <!-- Content -->
         <section id="content" class="table-layout animated fadeIn">
 
-            <!-- Column Left -->
-            <aside class="chute chute-left chute-icon-style chute290 bg-info" data-chute-height="match">
-                <div class="chute-icon"></div>
-                <div class="chute-container">
-                    <!-- New Message -->
-                    <button id="quick-compose" type="button" class="btn btn-dark light btn-block fw600">New message
-                    </button>
-
-                    <!-- Message Menu -->
-                    <div class="list-group list-group-links in-bg-chute mt20">
-                        <div class="list-group-header"> Mail</div>
-                        <a href="<?php echo base_url(); ?>#" class="list-group-item">
-                            <i class="fa fa-envelope-o"></i>
-                            Inbox
-                            <span class="label badge-success">4</span>
-                        </a>
-                        <a href="<?php echo base_url(); ?>#" class="list-group-item">
-                            <i class="fa fa-save"></i>
-                            Drafts
-                        </a>
-                        <a href="<?php echo base_url(); ?>#" class="list-group-item">
-                            <i class="fa fa-file-o"></i>
-                            Sent Items
-                        </a>
-                        <a href="<?php echo base_url(); ?>#" class="list-group-item">
-                            <i class="fa fa-times-circle-o"></i>
-                            Spam
-                        </a>
-                        <a href="<?php echo base_url(); ?>#" class="list-group-item">
-                            <i class="fa fa-trash-o"></i>
-                            Trash
-                        </a>
-                        <a href="<?php echo base_url(); ?>#" class="list-group-item">
-                            <i class="fa fa-spinner"></i>
-                            Email Settings
-                        </a>
-                        <a href="<?php echo base_url(); ?>#" class="list-group-item">
-                            <i class="fa fa-smile-o"></i>
-                            Contacts
-                            <span class="label badge-dark">3</span>
-                        </a>
-                    </div>
-                </div>
-
-            </aside>
-            <!-- /Column Left -->
+            
 
             <!-- Column Center -->
             <div class="chute chute-center pn bg-light">
@@ -876,338 +831,377 @@
                         </div>
                     </div>
 
-                    <!-- Toolbar Header -->
-                    <div class="panel-menu br-n pn mtn">
-                        <div class="row">
-                            <div class="hidden-xs hidden-sm col-md-3">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default light">
-                                        <i class="fa fa-refresh"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-default light">
-                                        <i class="fa fa-pencil"></i>
-                                    </button>
+
+                        <div id="exTab2" class="container">	
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a  href="#1" data-toggle="tab">Members</a>
+                                </li>
+                                <li>
+                                    <a href="#2" data-toggle="tab">Visitors</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content ">
+                                <div class="tab-pane active" id="1">
+                                      
+                                    <!-- Toolbar Header -->
+                                    <div class="panel-menu br-n pn mtn">
+                                        <div class="row">
+                                            <div class="hidden-xs hidden-sm col-md-3">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-refresh"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-9 text-right ta-l-xs">
+                                                <button type="button" class="btn btn-dark light visible-xs-inline-block mr10">
+                                                    Compose
+                                                </button>
+                                                <span class="hidden-xs va-m text-muted mr15"> <strong>9</strong> messages
+                                                </span>
+
+                                                <div class="btn-group mr10">
+                                                    <button type="button" class="btn btn-default light hidden-xs">
+                                                        <i class="fa fa-star"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-default light hidden-xs">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="btn-group mr10">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default light dropdown-toggle ph8"
+                                                                data-toggle="dropdown">
+                                                            <span class="fa fa-tags"></span>
+                                                            <span class="caret ml5"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu pull-right" role="menu">
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #1</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #3</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">
+                                                                    <span class="fa fa-plus pr5"></span> Create New</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-group">
+                                                        <button type="button"
+                                                                class="btn btn-default light dropdown-toggle ph8 br-tp-left"
+                                                                data-toggle="dropdown">
+                                                            <span class="fa fa-folder"></span>
+                                                            <span class="caret ml5"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu pull-right" role="menu">
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #1</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #3</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">
+                                                                    <span class="fa fa-plus pr5"></span> Create New</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message Body -->
+                                    <div class="table-responsive">
+                                        <table id="" class="table tc-checkbox-1 allcp-form theme-warning br-t">
+                                            <thead>
+                                            <tr class="">
+                                                <th class="text-center hidden-xs">Select</th>
+                                                <th class="hidden-xs">Star</th>
+                                                <th>Sender</th>
+                                                <th>Message</th>
+                                                <th class="text-center">Date</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+
+                                            <tr class="message-unread">
+                                                <td class="hidden-xs">
+                                                    <label class="option block mn">
+                                                        <input type="checkbox" name="inputname" value="FR">
+                                                        <span class="checkbox mn"></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs">
+                                                <span class="rating block mn pull-left">
+                                                    <input class="rating-input" id="r3" type="radio" name="custom">
+                                                    <label class="rating-star" for="r3">
+                                                        <i class="fa fa-star va-m"></i>
+                                                    </label>
+                                                </span>
+                                                </td>
+                                                <td class="">Rich Eritas</td>
+                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
+                                                <td class="text-center">October 20</td>
+                                            </tr>
+
+                                            <tr class="message-read">
+                                                <td class="hidden-xs">
+                                                    <label class="option block mn">
+                                                        <input type="checkbox" name="inputname" value="FR">
+                                                        <span class="checkbox mn"></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs">
+                                                <span class="rating block mn pull-left">
+                                                  <input class="rating-input" id="r5" type="radio" name="custom">
+                                                  <label class="rating-star" for="r5">
+                                                      <i class="fa fa-star va-m"></i>
+                                                  </label>
+                                                </span>
+                                                </td>
+                                                <td class="">Chilik</td>
+                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
+                                                <td class="text-center">October 19</td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                
+                                
+                                </div>
+                                <div class="tab-pane" id="2">
+                                      
+                                    <!-- Toolbar Header -->
+                                    <div class="panel-menu br-n pn mtn">
+                                        <div class="row">
+                                            <div class="hidden-xs hidden-sm col-md-3">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-refresh"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-9 text-right ta-l-xs">
+                                                <button type="button" class="btn btn-dark light visible-xs-inline-block mr10">
+                                                    Compose
+                                                </button>
+                                                <span class="hidden-xs va-m text-muted mr15"> <strong>9</strong> messages
+                                                </span>
+
+                                                <div class="btn-group mr10">
+                                                    <button type="button" class="btn btn-default light hidden-xs">
+                                                        <i class="fa fa-star"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-default light hidden-xs">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="btn-group mr10">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default light dropdown-toggle ph8"
+                                                                data-toggle="dropdown">
+                                                            <span class="fa fa-tags"></span>
+                                                            <span class="caret ml5"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu pull-right" role="menu">
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #1</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #3</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">
+                                                                    <span class="fa fa-plus pr5"></span> Create New</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-group">
+                                                        <button type="button"
+                                                                class="btn btn-default light dropdown-toggle ph8 br-tp-left"
+                                                                data-toggle="dropdown">
+                                                            <span class="fa fa-folder"></span>
+                                                            <span class="caret ml5"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu pull-right" role="menu">
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #1</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">Submenu #3</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>#">
+                                                                    <span class="fa fa-plus pr5"></span> Create New</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-default light">
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message Body -->
+                                    <div class="table-responsive">
+                                        <table id="" class="table tc-checkbox-1 allcp-form theme-warning br-t">
+                                            <thead>
+                                            <tr class="">
+                                                <th class="text-center hidden-xs">Select</th>
+                                                <th class="hidden-xs">Star</th>
+                                                <th>Sender</th>
+                                                <th>Message</th>
+                                                <th class="text-center">Date</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr class="message-read">
+                                                <td class="hidden-xs">
+                                                    <label class="option block mn">
+                                                        <input type="checkbox" name="inputname" value="FR">
+                                                        <span class="checkbox mn"></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs">
+                                                <span class="rating block mn pull-left">
+                                                    <input class="rating-input" id="r3" type="radio" name="custom">
+                                                    <label class="rating-star" for="r3">
+                                                        <i class="fa fa-star va-m"></i>
+                                                    </label>
+                                                </span>
+                                                </td>
+                                                <td>Rich Eritas</td>
+                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
+                                                <td class="text-center">October 20</td>
+                                            </tr>
+
+                                            <tr class="message-read">
+                                                <td class="hidden-xs">
+                                                    <label class="option block mn">
+                                                        <input type="checkbox" name="inputname" value="FR">
+                                                        <span class="checkbox mn"></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs">
+                                                <span class="rating block mn pull-left">
+                                                  <input class="rating-input" id="r5" type="radio" name="custom">
+                                                  <label class="rating-star" for="r5">
+                                                      <i class="fa fa-star va-m"></i>
+                                                  </label>
+                                                </span>
+                                                </td>
+                                                <td class="">Chilik</td>
+                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
+                                                <td class="text-center">October 19</td>
+                                            </tr>
+                                            
+                                            <tr class="message-read">
+                                                <td class="hidden-xs">
+                                                    <label class="option block mn">
+                                                        <input type="checkbox" name="inputname" value="FR">
+                                                        <span class="checkbox mn"></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs">
+                                                <span class="rating block mn pull-left">
+                                                  <input class="rating-input" id="r5" type="radio" name="custom">
+                                                  <label class="rating-star" for="r5">
+                                                      <i class="fa fa-star va-m"></i>
+                                                  </label>
+                                                </span>
+                                                </td>
+                                                <td class="">Chilik</td>
+                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
+                                                <td class="text-center">October 19</td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-9 text-right ta-l-xs">
-                                <button type="button" class="btn btn-dark light visible-xs-inline-block mr10">
-                                    Compose
-                                </button>
-                                <span class="hidden-xs va-m text-muted mr15"> <strong>9</strong> messages
-                                </span>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" role="dialog">
+                              <div class="modal-dialog">
 
-                                <div class="btn-group mr10">
-                                    <button type="button" class="btn btn-default light hidden-xs">
-                                        <i class="fa fa-star"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-default light hidden-xs">
-                                        <i class="fa fa-calendar"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-default light">
-                                        <i class="fa fa-trash"></i>
-                                    </button>
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Modal Header</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p>Some text in the modal.</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  </div>
                                 </div>
-                                <div class="btn-group mr10">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default light dropdown-toggle ph8"
-                                                data-toggle="dropdown">
-                                            <span class="fa fa-tags"></span>
-                                            <span class="caret ml5"></span>
-                                        </button>
-                                        <ul class="dropdown-menu pull-right" role="menu">
-                                            <li>
-                                                <a href="<?php echo base_url(); ?>#">Submenu #1</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo base_url(); ?>#">Submenu #2</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo base_url(); ?>#">Submenu #3</a>
-                                            </li>
-                                            <li class="divider"></li>
-                                            <li>
-                                                <a href="<?php echo base_url(); ?>#">
-                                                    <span class="fa fa-plus pr5"></span> Create New</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btn-group">
-                                        <button type="button"
-                                                class="btn btn-default light dropdown-toggle ph8 br-tp-left"
-                                                data-toggle="dropdown">
-                                            <span class="fa fa-folder"></span>
-                                            <span class="caret ml5"></span>
-                                        </button>
-                                        <ul class="dropdown-menu pull-right" role="menu">
-                                            <li>
-                                                <a href="<?php echo base_url(); ?>#">Submenu #1</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo base_url(); ?>#">Submenu #2</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo base_url(); ?>#">Submenu #3</a>
-                                            </li>
-                                            <li class="divider"></li>
-                                            <li>
-                                                <a href="<?php echo base_url(); ?>#">
-                                                    <span class="fa fa-plus pr5"></span> Create New</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default light">
-                                        <i class="fa fa-chevron-left"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-default light">
-                                        <i class="fa fa-chevron-right"></i>
-                                    </button>
 
-                                </div>
+                              </div>
                             </div>
+                            
+                            
+                            
                         </div>
-                    </div>
-
-                    <!-- Message Body -->
-                    <div class="table-responsive">
-                        <table id="message-table" class="table tc-checkbox-1 allcp-form theme-warning br-t">
-                            <thead>
-                            <tr class="">
-                                <th class="text-center hidden-xs">Select</th>
-                                <th class="hidden-xs">Star</th>
-                                <th>Sender</th>
-                                <th>Subject</th>
-                                <th class="hidden-xs">Attachement</th>
-                                <th class="text-center">Date</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="message-unread">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r1" type="radio" name="custom">
-	                    <label class="rating-star" for="r1">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Digital worm</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"></td>
-                                <td class="text-center fw600">October 20</td>
-                            </tr>
-                            <tr class="message-unread">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r2" type="radio" name="custom">
-	                    <label class="rating-star" for="r2">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">All Stars</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs">
-                                    <i class="fa fa-paperclip fs15 text-muted va-b"></i>
-                                </td>
-                                <td class="text-center">October 20</td>
-                            </tr>
-                            <tr class="message-unread">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r3" type="radio" name="custom">
-	                    <label class="rating-star" for="r3">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Rich Eritas</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"></td>
-                                <td class="text-center">October 20</td>
-                            </tr>
-                            <tr class="message-unread">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r4" type="radio" name="custom">
-	                    <label class="rating-star" for="r4">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Somnabula</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"><i class="fa fa-paperclip fs15 text-muted va-b"></i></td>
-                                <td class="text-center">October 20</td>
-                            </tr>
-                            <tr class="message-read">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r5" type="radio" name="custom">
-	                    <label class="rating-star" for="r5">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Chilik</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"></td>
-                                <td class="text-center">October 19</td>
-                            </tr>
-                            <tr class="message-read">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r6" type="radio" name="custom">
-	                    <label class="rating-star" for="r6">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Rane Andwre</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"><i class="fa fa-paperclip fs15 text-muted va-b"></i></td>
-                                <td class="text-center">October 19</td>
-                            </tr>
-                            <tr class="message-read">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r7" type="radio" name="custom">
-	                    <label class="rating-star" for="r7">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">John Doe</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"></td>
-                                <td class="text-center">October 19</td>
-                            </tr>
-                            <tr class="message-read">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r8" type="radio" name="custom">
-	                    <label class="rating-star" for="r8">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Sack Bane</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"><i class="fa fa-paperclip fs15 text-muted va-b"></i></td>
-                                <td class="text-center">October 19</td>
-                            </tr>
-                            <tr class="message-read">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r9" type="radio" name="custom">
-	                    <label class="rating-star" for="r9">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Ban Zai</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"></td>
-                                <td class="text-center">October 19</td>
-                            </tr>
-                            <tr class="message-read">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r10" type="radio" name="custom">
-	                    <label class="rating-star" for="r10">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Tin Tin</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"><i class="fa fa-paperclip fs15 text-muted va-b"></i></td>
-                                <td class="text-center">October 19</td>
-                            </tr>
-                            <tr class="message-read">
-                                <td class="hidden-xs">
-                                    <label class="option block mn">
-                                        <input type="checkbox" name="inputname" value="FR">
-                                        <span class="checkbox mn"></span>
-                                    </label>
-                                </td>
-                                <td class="hidden-xs">
-	                  <span class="rating block mn pull-left">
-	                    <input class="rating-input" id="r11" type="radio" name="custom">
-	                    <label class="rating-star" for="r11">
-                            <i class="fa fa-star va-m"></i>
-                        </label>
-	                  </span>
-                                </td>
-                                <td class="">Rock For</td>
-                                <td class="">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                <td class="hidden-xs"></td>
-                                <td class="text-center">October 19</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <hr></hr>
                 </div>
 
             </div>

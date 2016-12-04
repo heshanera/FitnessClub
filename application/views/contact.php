@@ -3,7 +3,8 @@
   
 <!-- Mirrored from projects.pulsarmedia.ca/energy/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Nov 2016 13:38:57 GMT -->
 <head>
-    <meta charset="utf-8">
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -186,95 +187,47 @@
                 
                 <div class="row">
                 
-                	<form action="#" method="post" id="pm-contact-form">
-                    	
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <input name="pm_s_first_name" id="pm_s_first_name" class="pm-form-textfield" type="text" placeholder="First Name *">
-                        </div>
-                        
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <input name="pm_s_last_name" id="pm_s_last_name" class="pm-form-textfield" type="text" placeholder="Last Name *">
-                        </div>
-                        
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <input name="pm_s_email_address" id="pm_s_email_address" class="pm-form-textfield" type="text" placeholder="Email Address *">
-                        </div>
-                        
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <input name="pm_s_phone_number" class="pm-form-textfield" type="text" placeholder="Phone Number">
-                        </div>
-                        
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <textarea name="pm_s_message" class="pm-form-textarea" cols="50" rows="10" placeholder="Message *"></textarea>
-                        </div>
-				
-							
-							<div class="row">
-								<div class = "box"></div>
-							</div>
-							
-							
-							<button class="pm-form-submit-btn" type="button" data-toggle="collapse" data-target="#showQuestion" aria-expanded="false" aria-controls="showQuestion">
-								HAVE A QUESTION?
-							</button>
-							
-							<div class="row">
-								<div class = "box"></div>
-							</div>
-							
-							
-							<div class="collapse" id="showQuestion">
-							<div class="">
+                    <form action="index.php/Contact/submitMessage" method="post" id="pm-contact-form">
 
-									<div class="col-lg-6 col-md-6 col-sm-12">
-										<input name="age" id="pm_s_first_name" class="pm-form-textfield" type="text" placeholder="Age *">
-									</div>
-									
-									<div class="col-lg-6 col-md-6 col-sm-12">
-										<input name="gender" id="pm_s_last_name" class="pm-form-textfield" type="text" placeholder="Gender *">
-									</div>
-									
-									<div class="col-lg-6 col-md-6 col-sm-12">
-										<input name="weight" id="pm_s_email_address" class="pm-form-textfield" type="text" placeholder="Weight *">
-									</div>
-									
-									<div class="col-lg-6 col-md-6 col-sm-12">
-										<input name="height" class="pm-form-textfield" type="text" placeholder="Height">
-									</div>
-									
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<textarea name="question" class="pm-form-textarea" cols="50" rows="10" placeholder="Question *"></textarea>
-									</div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <input name="first_name" id="first_name" class="pm-form-textfield" type="text" placeholder="First Name *" required>
+                    </div>
 
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<label><h6> <input name="plan" type="checkbox"> Request a Workout Plan </h6></label>
-									</div>
-									
-								
-							  </div>
-							</div>   
-						  </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <input name="last_name" id="last_name" class="pm-form-textfield" type="text" placeholder="Last Name *" required>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <input name="email" id="email" class="pm-form-textfield" type="email" placeholder="Email Address *" required>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <input name="phone" class="pm-form-textfield" type="phone" placeholder="Phone Number" required>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <textarea name="message" class="pm-form-textarea" cols="50" rows="10" placeholder="Message *" required></textarea>
+                    </div>
+		
                         
                         
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                        	<div class="pm_captcha_box">
-                            	<p>Security Code:</p>
-                                <img src="<?php echo base_url(); ?>js/ajax-contact/CaptchaSecurityImagesbb55.jpg?width=125&amp;height=50&amp;characters=5" /><br />
-                                <div style="padding-top:2px;"><input class="pm_s_security_code pm-form-textfield" name="security_code" type="text" id="security_code" maxlength="5" /></div>
-                            </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="pm_captcha_box">
+                            <p>Security Code:</p>
+                            <img src="<?php echo base_url(); ?>js/ajax-contact/CaptchaSecurityImagesbb55.jpg?width=125&amp;height=50&amp;characters=5" /><br />
+                            <div style="padding-top:2px;"><input class="pm_s_security_code pm-form-textfield" name="security_code" type="text" id="security_code" maxlength="5" /></div>
                         </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 pm-center">
+                        <input type="submit" value="Submit Form" name="" class="pm-form-submit-btn" id="pm-contact-form-btn">
+                        <div id="pm-contact-form-response"></div>
+                        <p class="pm-required">Fields marked with * are required</p>
+                    </div>
                         
-                        <div class="col-lg-12 col-md-12 col-sm-12 pm-center">
-                            <input type="button" value="Submit Form" name="pm-form-submit-btn" class="pm-form-submit-btn" id="pm-contact-form-btn">
-                            <div id="pm-contact-form-response"></div>
-                            <p class="pm-required">Fields marked with * are required</p>
-                        </div>
-                        
-                        <input type="hidden" name="pm_s_email_address_contact" value="info@pulsarmedia.ca" />
                     
                     </form>
-                
-                	
+                </div>    
                 
                 </div>
             
