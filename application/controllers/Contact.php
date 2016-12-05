@@ -27,6 +27,12 @@ class Contact extends CI_Controller {
     // When user submit data on view page, Then this function store data in array.
     public function submitMessage() 
     {
+        /*
+        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
+        $username = "b5931a4eeccf92";
+        $password = "1841dc47";
+        $dbname = "fitnessclub";
+        */
         
         $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
         $username = "b5931a4eeccf92";
@@ -34,10 +40,17 @@ class Contact extends CI_Controller {
         $dbname = "fitnessclub";
         
         
-        $form_data = $this->input->post();
-        $baseUrl = $this->config->base_url();
-        header('Location:'.$baseUrl.'contact');
+        /*
+        echo $form_data['first_name'].'<br>';
+        echo $form_data['last_name'].'<br>';
+        echo $form_data['email'].'<br>';
+        echo $form_data['phone'].'<br>';
+        echo $form_data['message'].'<br>';
+        echo $form_data['security_code'].'<br>';
+         */
         
+        
+        $form_data = $this->input->post();
         
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -46,7 +59,7 @@ class Contact extends CI_Controller {
             die("Connection failed: " . $conn->connect_error);
         } 
 
-        $sql = "SELECT message_id FROM web_message WHERE message_id = (SELECT MAX(message_id) FROM web_message);";
+        $sql = "SELECT message_id FROM visitor_message WHERE message_id = (SELECT MAX(message_id) FROM visitor_message);";
         $result = $conn->query($sql);
         $mess_id = 0;
 
@@ -66,7 +79,7 @@ class Contact extends CI_Controller {
 
         // Checking for previous messages //
 
-        $sql = "SELECT message, message_id FROM web_message WHERE email = '".$email."'";
+        $sql = "SELECT message, message_id FROM visitor_message WHERE email = '".$email."';";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -76,14 +89,13 @@ class Contact extends CI_Controller {
                 $message_id = $row["message_id"];
             }
 
-            $sql2 = "UPDATE web_message SET ".
+            $sql2 = "UPDATE visitor_message SET ".
                     "first_name='".$form_data["first_name"]."',".
                     "last_name='".$form_data["last_name"]."',".
                     "phone='".$form_data["phone"]."',".
                     "message='".$message."',".
-                    "date='".$date."'".
-                    "read='".$read."'".    
-                    "WHERE message_id='".$message_id."'";
+                    "date='".$date."' ".
+                    "WHERE message_id=".$message_id.";";
 
 
 
@@ -95,134 +107,47 @@ class Contact extends CI_Controller {
 
         } else {
 
-            $sql = "INSERT INTO web_message (message_id, name, email,phone,message,date)
-                    VALUES ('"
-                            .$mess_id."','"
+            $sql = "INSERT INTO visitor_message (message_id,first_name,last_name,email,phone,message,date)
+                    VALUES ("
+                            .$mess_id.",'"
                             .$form_data["first_name"]."','"
                             .$form_data["last_name"]."','"
                             .$email."','"
                             .$form_data["phone"]."','"
                             .$message."','"
-                            .$date
-                            ."')";
+                            .$date."');";
 
             if ($conn->query($sql) === TRUE) 
             {
-                //echo "<h1>".$_POST["name"].",<br> Your message successfully submitted!</h1>";
+                echo "<h1>".$_POST["name"].",<br> Your message successfully submitted!</h1>";
 
             } else {
-                //echo "Error: " . $sql . "<br>" . $conn->error;
+                echo "Error: " . $sql . "<br>" . $conn->error;
             }
         }
         
         
         $conn->close();
         
+        $baseUrl = $this->config->base_url();
+        header('Location:'.$baseUrl.'contact');
         
-        /*
-        echo $form_data.'<br>';
-        echo sizeof($form_data).'<br>';
+    } 
+
+    public function sendMail($email,$message)
+    {
+        $this->load->library('email');
+
+        $this->email->from('admin@fitness.com', 'Admin');
+        $this->email->to($email);
+        $this->email->cc('');
+        $this->email->bcc('');
+
+        $this->email->subject('Fitness Club');
+        $this->email->message($message);
+
+        $this->email->send();
         
-        
-        echo $form_data['first_name'].'<br>';
-        echo $form_data['last_name'].'<br>';
-        echo $form_data['email'].'<br>';
-        echo $form_data['phone'].'<br>';
-        echo $form_data['message'].'<br>';
-         
-        
-        
-        echo $form_data['security_code'].'<br>';
-        */
-        /*
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        } 
+    }        
 
-        $sql = "SELECT message_id FROM web_message WHERE message_id = (SELECT MAX(message_id) FROM web_message);";
-        $result = $conn->query($sql);
-        $mess_id = 0;
-
-        if (($result->num_rows) > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                $mess_id = $row["message_id"]+1;
-            }
-        } else {
-            $mess_id = 1;
-        }
-
-        $message = $_POST["message"];
-        $email = $_POST["email"];
-        $date = date("Y-m-d H:i:s");
-        $read = 0;
-
-        if ( ($email != NULL) and ($message != NULL))
-        {
-
-            // Checking for previous messages //
-
-            $sql = "SELECT message, message_id FROM web_message WHERE email = '".$email."'";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                // output data of each row
-                while($row = $result->fetch_assoc()) {
-                    $tmp_message =  $row["message"];
-                    $message_id = $row["message_id"];
-                }
-
-                $sql2 = "UPDATE web_message SET ".
-                        "first_name='".$_POST["first_name"]."',".
-                        "last_name='".$_POST["last_name"]."',".
-                        "phone='".$_POST["phone"]."',".
-                        "message='".$message."',".
-                        "date='".$date."'".
-                        "read='".$read."'".    
-                        "WHERE message_id='".$message_id."'";
-
-
-
-                if ($conn->query($sql2) === TRUE) {
-                    echo "<h1>".$_POST["first_name"].",<br> Your message successfully submitted!</h1>";
-                } else {
-                    echo "Error updating record: " . $conn->error;
-                } 
-
-            } else {
-
-                $sql = "INSERT INTO web_message (message_id, name, email,phone,message,date)
-                        VALUES ('"
-                                .$mess_id."','"
-                                .$_POST["first_name"]."','"
-                                .$_POST["last_name"]."','"
-                                .$email."','"
-                                .$_POST["phone"]."','"
-                                .$message."','"
-                                .$date
-                                ."')";
-
-                if ($conn->query($sql) === TRUE) 
-                {
-                    //echo "<h1>".$_POST["name"].",<br> Your message successfully submitted!</h1>";
-
-                } else {
-                    //echo "Error: " . $sql . "<br>" . $conn->error;
-                }
-            }
-
-        } else {
-
-            //header("Location: contactForm.html");
-            //echo "<h1>PLEASE FILL A VALID EMAIL AND THE MESSAGE!</h1>";
-
-        }
-        $conn->close(); 
-         * 
-         */
-        
-    }     
 }        

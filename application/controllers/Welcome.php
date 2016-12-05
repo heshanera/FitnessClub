@@ -40,6 +40,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function contact(){
+            
 		$this->load->helper('url');
 		$this->load->view('contact');
 	}
@@ -86,8 +87,37 @@ class Welcome extends CI_Controller {
 	}
 	
 	public function adminMessages(){
+            
+                $this->load->model('VisitorMessageModel','',True);
+		$query = $this->VisitorMessageModel->getMessageFields();
+		$i = 0;
+		
+		foreach($query->result_array() AS $row) 
+		{
+    			$first_name[$i] = $row['first_name'];
+			$last_name[$i] = $row['last_name'];
+			$email[$i] = $row['email'];
+                        $phone[$i] = $row['phone'];
+                        $message[$i] = $row['message'];
+                        $date[$i] = $row['date'];
+                        $read[$i] = $row['read'];
+                        $reply[$i] = $row['reply'];
+                        
+			$i++;
+		}
+		$data['first_name'] = $first_name;
+		$data['last_name'] = $last_name;
+		$data['email'] = $email;
+		$data['phone'] = $phone;
+                $data['message'] = $message;
+                $data['date'] = $date;
+                $data['read'] = $read;
+                $data['reply'] = $reply;
+
+		//echo $data['message'][1];
+            
 		$this->load->helper('url');
-		$this->load->view('admin-basic-messages');
+		$this->load->view('admin-basic-messages',$data);
 	}
 	
 	public function adminProfile(){
@@ -300,6 +330,29 @@ class Welcome extends CI_Controller {
 
 	}
 	
+        public function sendMail($message)
+        {
+            $email = "erangamx@gmail.com";
+            $this->load->library('email');
+
+            $config['protocol'] = 'sendmail';
+            $config['mailpath'] = '/usr/sbin/sendmail';
+            $config['charset'] = 'iso-8859-1';
+            $config['wordwrap'] = TRUE;
+            
+            $this->email->initialize($config);
+            
+            $this->email->to($email);
+            $this->email->from('admin@fitness.com', 'Admin');
+            $this->email->subject('Fitness Club');
+            $this->email->message($message);
+
+            $mail = $this->email->send();
+            
+            
+            echo "<h1>".$email."->".$message."</h1><br><br>";
+            echo "<h1>".$mail."</h1>";
+        } 
 	
 	
 	

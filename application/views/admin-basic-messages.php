@@ -832,7 +832,7 @@
                     </div>
 
 
-                        <div id="exTab2" class="container">	
+                        <div id="exTab2" class="">	
                             <ul class="nav nav-tabs">
                                 <li class="active">
                                     <a  href="#1" data-toggle="tab">Members</a>
@@ -946,52 +946,12 @@
                                                 <th class="text-center hidden-xs">Select</th>
                                                 <th class="hidden-xs">Star</th>
                                                 <th>Sender</th>
-                                                <th>Message</th>
+                                                <th>Email</th>
                                                 <th class="text-center">Date</th>
                                             </tr>
                                             </thead>
                                             <tbody>
 
-
-                                            <tr class="message-unread">
-                                                <td class="hidden-xs">
-                                                    <label class="option block mn">
-                                                        <input type="checkbox" name="inputname" value="FR">
-                                                        <span class="checkbox mn"></span>
-                                                    </label>
-                                                </td>
-                                                <td class="hidden-xs">
-                                                <span class="rating block mn pull-left">
-                                                    <input class="rating-input" id="r3" type="radio" name="custom">
-                                                    <label class="rating-star" for="r3">
-                                                        <i class="fa fa-star va-m"></i>
-                                                    </label>
-                                                </span>
-                                                </td>
-                                                <td class="">Rich Eritas</td>
-                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                                <td class="text-center">October 20</td>
-                                            </tr>
-
-                                            <tr class="message-read">
-                                                <td class="hidden-xs">
-                                                    <label class="option block mn">
-                                                        <input type="checkbox" name="inputname" value="FR">
-                                                        <span class="checkbox mn"></span>
-                                                    </label>
-                                                </td>
-                                                <td class="hidden-xs">
-                                                <span class="rating block mn pull-left">
-                                                  <input class="rating-input" id="r5" type="radio" name="custom">
-                                                  <label class="rating-star" for="r5">
-                                                      <i class="fa fa-star va-m"></i>
-                                                  </label>
-                                                </span>
-                                                </td>
-                                                <td class="">Chilik</td>
-                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                                <td class="text-center">October 19</td>
-                                            </tr>
 
                                             </tbody>
                                         </table>
@@ -1019,7 +979,7 @@
                                                 <button type="button" class="btn btn-dark light visible-xs-inline-block mr10">
                                                     Compose
                                                 </button>
-                                                <span class="hidden-xs va-m text-muted mr15"> <strong>9</strong> messages
+                                                <span class="hidden-xs va-m text-muted mr15"> <strong><?php echo sizeof($email) ?></strong> messages
                                                 </span>
 
                                                 <div class="btn-group mr10">
@@ -1033,55 +993,7 @@
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                 </div>
-                                                <div class="btn-group mr10">
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-default light dropdown-toggle ph8"
-                                                                data-toggle="dropdown">
-                                                            <span class="fa fa-tags"></span>
-                                                            <span class="caret ml5"></span>
-                                                        </button>
-                                                        <ul class="dropdown-menu pull-right" role="menu">
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>#">Submenu #1</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>#">Submenu #2</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>#">Submenu #3</a>
-                                                            </li>
-                                                            <li class="divider"></li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>#">
-                                                                    <span class="fa fa-plus pr5"></span> Create New</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <button type="button"
-                                                                class="btn btn-default light dropdown-toggle ph8 br-tp-left"
-                                                                data-toggle="dropdown">
-                                                            <span class="fa fa-folder"></span>
-                                                            <span class="caret ml5"></span>
-                                                        </button>
-                                                        <ul class="dropdown-menu pull-right" role="menu">
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>#">Submenu #1</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>#">Submenu #2</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>#">Submenu #3</a>
-                                                            </li>
-                                                            <li class="divider"></li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>#">
-                                                                    <span class="fa fa-plus pr5"></span> Create New</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
+                                                
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-default light">
                                                         <i class="fa fa-chevron-left"></i>
@@ -1100,78 +1012,112 @@
                                         <table id="" class="table tc-checkbox-1 allcp-form theme-warning br-t">
                                             <thead>
                                             <tr class="">
-                                                <th class="text-center hidden-xs">Select</th>
-                                                <th class="hidden-xs">Star</th>
+                                                <th class="text-center hidden-xs"></th>
+                                                <th class="hidden-xs">Replied</th>
                                                 <th>Sender</th>
-                                                <th>Message</th>
+                                                <th>Email</th>
                                                 <th class="text-center">Date</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-
-                                            <tr class="message-read">
-                                                <td class="hidden-xs">
-                                                    <label class="option block mn">
-                                                        <input type="checkbox" name="inputname" value="FR">
-                                                        <span class="checkbox mn"></span>
-                                                    </label>
-                                                </td>
-                                                <td class="hidden-xs">
-                                                <span class="rating block mn pull-left">
-                                                    <input class="rating-input" id="r3" type="radio" name="custom">
-                                                    <label class="rating-star" for="r3">
-                                                        <i class="fa fa-star va-m"></i>
-                                                    </label>
-                                                </span>
-                                                </td>
-                                                <td>Rich Eritas</td>
-                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                                <td class="text-center">October 20</td>
-                                            </tr>
-
-                                            <tr class="message-read">
-                                                <td class="hidden-xs">
-                                                    <label class="option block mn">
-                                                        <input type="checkbox" name="inputname" value="FR">
-                                                        <span class="checkbox mn"></span>
-                                                    </label>
-                                                </td>
-                                                <td class="hidden-xs">
-                                                <span class="rating block mn pull-left">
-                                                  <input class="rating-input" id="r5" type="radio" name="custom">
-                                                  <label class="rating-star" for="r5">
-                                                      <i class="fa fa-star va-m"></i>
-                                                  </label>
-                                                </span>
-                                                </td>
-                                                <td class="">Chilik</td>
-                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                                <td class="text-center">October 19</td>
-                                            </tr>
+                                            <?php 
+                                                $noOfMessages = sizeof($first_name);
+                                                
+                                                for($i = 0; $i < $noOfMessages; $i++ )
+                                                {
+                                                    if ( $read[$i] == 1 ) {
+                                                        echo "<tr class='message-read'>";
+                                                    } else {
+                                                        echo "<tr class='message-unread'>";
+                                                    }    
+                                                        echo "<td class='hidden-xs'>";
+                                                            echo "<label class='option block mn'>";
+                                                                echo "<input type='checkbox' name='inputname' value='FR'>";
+                                                                echo "<span class='checkbox mn'></span>";
+                                                            echo "</label>";
+                                                        echo "</td>";
+                                                        /*
+                                                        echo "<td class='hidden-xs'>";
+                                                        echo "<span class='rating block mn pull-left'>";
+                                                            echo "<input class='rating-input' id='r3' type='radio' name='custom'>";
+                                                            echo "<label class='rating-star' for='r3'>";
+                                                                echo "<i class='fa fa-star va-m'></i>";
+                                                            echo "</label>";
+                                                        echo "</span>";
+                                                        echo "</td>";
+                                                         */
+                                                        if ( $reply[$i] == 1 ) {
+                                                            echo "<td><i style='color:red' class='fa fa-star va-m'></i></td>";
+                                                        } else {
+                                                            echo "<td><i class='fa fa-star va-m'></i></td>";
+                                                        }
+                                                        echo "<td>".$first_name[$i].' '.$last_name[$i]."</td>";
+                                                        echo "<td style='cursor:pointer' onclick='getRow($i)' class='' data-toggle='modal' data-target='#myModal'>".$email[$i]."</td>";
+                                                        echo "<td class='text-center'>".$date[$i]."</td>";
+                                                    echo "</tr>";
+                                                    
+                                                }
+                                            ?>
                                             
-                                            <tr class="message-read">
-                                                <td class="hidden-xs">
-                                                    <label class="option block mn">
-                                                        <input type="checkbox" name="inputname" value="FR">
-                                                        <span class="checkbox mn"></span>
-                                                    </label>
-                                                </td>
-                                                <td class="hidden-xs">
-                                                <span class="rating block mn pull-left">
-                                                  <input class="rating-input" id="r5" type="radio" name="custom">
-                                                  <label class="rating-star" for="r5">
-                                                      <i class="fa fa-star va-m"></i>
-                                                  </label>
-                                                </span>
-                                                </td>
-                                                <td class="">Chilik</td>
-                                                <td class="" data-toggle="modal" data-target="#myModal">Claritas est etiam processus dynamicus, qui sequitur.</td>
-                                                <td class="text-center">October 19</td>
-                                            </tr>
+                                            <script>
+                                                function getRow(i)
+                                                {
+                                                    fname = <?php echo json_encode($first_name); ?>;
+                                                    lname = <?php echo json_encode($last_name); ?>;
+                                                    message = <?php echo json_encode($message); ?>;
+                                                    email = <?php echo json_encode($email); ?>;
+                                                    document.getElementById("sender").innerHTML = fname[i]+" "+lname[i];
+                                                    document.getElementById("popEmail").innerHTML = email[i];
+                                                    document.getElementById("popMessage").innerHTML = message[i];
+                                                }
+                                           
+                                                function setMail()
+                                                {
+                                                    document.getElementById("popEmail2").innerHTML =    "To: " +
+                                                                                                        document.getElementById("sender").innerHTML + 
+                                                                                                        " [ " + 
+                                                                                                        document.getElementById("popEmail").innerHTML+
+                                                                                                        " ]"; 
+                                                    document.getElementById('emailMessage').value = '';
+                                                                                                
+                                                }
+                                                
+                                                
+                                                function sendMessage()
+                                                {
+                                                    var email = document.getElementById("popEmail").innerHTML;
+                                                    var message = document.getElementById("emailMessage").value;
+                   
+                                                    /*
+                   
+                                                    var xhttp = new XMLHttpRequest();
+                                                    xhttp.onreadystatechange = function() {
+                                                        if (this.readyState == 4 && this.status == 200) {
+                                                            if(this.responseText !="success"){
+                                                                
+                                                            }
+                                                        }
+                                                    };
+                                                    xhttp.open("POST", "sendMail/"+email+"/"+message, true);
+                                                    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                                    xhttp.send();
+                                                    */
+                                                   /*
+                                                   window.location.href = "<?php echo site_url('Welcome/sendMail/'+email+'/'+message);?>"; 
+                                                       
 
+                                                    alert(message+" -> "+email);
+                                                    */
+                                                    
+                                                    
+                                                }
+                                                
+                                            </script>  
+                                                
                                             </tbody>
                                         </table>
                                     </div>
+                                    
                                 
                                 
                                 </div>
@@ -1185,12 +1131,37 @@
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Modal Header</h4>
+                                    <h4 id="sender" class="modal-title"></h4>
+                                    <h6 id ="popEmail"></h6>
                                   </div>
                                   <div class="modal-body">
-                                    <p>Some text in the modal.</p>
+                                    <p id="popMessage"></p>
                                   </div>
                                   <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal" class="btn btn-default light" onclick='setMail()' placement="auto right" data-toggle='modal' data-target='#sendMessageModal'><i class="fa fa-pencil"></i></button>  
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                            
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="sendMessageModal" role="dialog">
+                              <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h6 id ="popEmail2"></h6>
+                                  </div>
+                                  <div class="modal-body">
+                                    <textarea name="message" id="emailMessage" class="pm-form-textarea" cols="68" rows="5" placeholder="Message *" required></textarea>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" onclick="sendMessage()" class="btn btn-default" data-dismiss="modal">Send</button>  
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                   </div>
                                 </div>
