@@ -787,10 +787,10 @@
                                                 <img class="img-responsive mw40 ib mr10" title="user" alt=""
                                                      src="<?php echo base_url(); ?>assets/img/pages/products/1.jpg">
                                             </td>
-                                            <td class="">Apple iPhone 5</td>
+                                            <td class="">BSN SYNTHA-6 PROTEIN</td>
                                             <td class="">#123</td>
-                                            <td class="">$500</td>
-                                            <td class="">300</td>
+                                            <td class="">$20</td>
+                                            <td class="">50</td>
                                             <td class="text-right">
                                                 <div class="btn-group text-right">
                                                     <button type="button"
@@ -836,10 +836,10 @@
                                                 <img class="img-responsive mw40 ib mr10" title="user" alt=""
                                                      src="<?php echo base_url(); ?>assets/img/pages/products/2.jpg">
                                             </td>
-                                            <td class="">Apple iPhone 6</td>
+                                            <td class="">HARBINGER : FLEXFIT GLOVES</td>
                                             <td class="">#1234</td>
-                                            <td class="">$600</td>
-                                            <td class="">500</td>
+                                            <td class="">$30</td>
+                                            <td class="">100</td>
                                             <td class="text-right">
                                                 <div class="btn-group text-right">
                                                     <button type="button"
@@ -885,10 +885,10 @@
                                                 <img class="img-responsive mw40 ib mr10" title="user" alt=""
                                                      src="<?php echo base_url(); ?>assets/img/pages/products/3.jpg">
                                             </td>
-                                            <td class="">Apple iPad</td>
+                                            <td class="">BSN SYNTHA-6 PROTEIN</td>
                                             <td class="">#2345</td>
-                                            <td class="">$400</td>
-                                            <td class="">300</td>
+                                            <td class="">$25</td>
+                                            <td class="">50</td>
                                             <td class="text-right">
                                                 <div class="btn-group text-right">
                                                     <button type="button"
