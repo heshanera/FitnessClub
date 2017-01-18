@@ -76,11 +76,12 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
     
+    
 	'hostname' => 'ap-cdbr-azure-southeast-b.cloudapp.net',
 	'username' => 'b5931a4eeccf92',
 	'password' => '1841dc47',
 	'database' => 'fitnessclub',
-     
+    
     /*
         'hostname' => 'localhost',
 	'username' => 'root',
