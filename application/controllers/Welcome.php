@@ -29,11 +29,17 @@ class Welcome extends CI_Controller {
 		$this->load->view('gallery');
 	}
 
-	public function store(){
+	public function storeProduct(){
+		$this->load->helper('url');
+		$this->load->view('storeProduct');
+	}
+
+        public function store(){
 		$this->load->helper('url');
 		$this->load->view('store');
 	}
-
+        
+        
 	public function schedules(){
 		$this->load->helper('url');
 		$this->load->view('schedules');
