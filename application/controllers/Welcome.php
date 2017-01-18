@@ -35,8 +35,12 @@ class Welcome extends CI_Controller {
 	}
 
         public function store(){
+            
+                $this->load->model('StoreModel','',True);
+		$data = $this->StoreModel->getStoreItems();
+            
 		$this->load->helper('url');
-		$this->load->view('store');
+		$this->load->view('store',$data);
 	}
         
         
@@ -95,33 +99,7 @@ class Welcome extends CI_Controller {
 	public function adminMessages(){
             
                 $this->load->model('VisitorMessageModel','',True);
-		$query = $this->VisitorMessageModel->getMessageFields();
-		$i = 0;
-		
-		foreach($query->result_array() AS $row) 
-		{
-    			$first_name[$i] = $row['first_name'];
-			$last_name[$i] = $row['last_name'];
-			$email[$i] = $row['email'];
-                        $phone[$i] = $row['phone'];
-                        $message[$i] = $row['message'];
-                        $date[$i] = $row['date'];
-                        $read[$i] = $row['read'];
-                        $reply[$i] = $row['reply'];
-                        
-			$i++;
-		}
-		$data['first_name'] = $first_name;
-		$data['last_name'] = $last_name;
-		$data['email'] = $email;
-		$data['phone'] = $phone;
-                $data['message'] = $message;
-                $data['date'] = $date;
-                $data['read'] = $read;
-                $data['reply'] = $reply;
-
-		//echo $data['message'][1];
-            
+		$data = $this->VisitorMessageModel->getMessageFields();
 		$this->load->helper('url');
 		$this->load->view('admin-basic-messages',$data);
 	}
@@ -161,9 +139,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin-sales-stats-general-settings');
 	}
 	
-	public function adminProducts(){
+	public function adminAddToStore(){
+                $this->load->model('StoreModel','',True);
+		$data = $this->StoreModel->getStoreItems();
+            
 		$this->load->helper('url');
-		$this->load->view('admin-sales-stats-products');
+		$this->load->view('admin-add-to-store',$data);
 	}
 	
 	public function adminPurchases(){
@@ -171,9 +152,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin-sales-stats-purchases');
 	}
 	
-	public function adminDashboard(){
+	public function adminStore(){
+                $this->load->model('StoreModel','',True);
+		$data = $this->StoreModel->getStoreItems();
+            
 		$this->load->helper('url');
-		$this->load->view('admin-dashboard2');
+		$this->load->view('admin-store',$data);
 	}
 
 	public function submitgalleryitem(){
@@ -184,7 +168,7 @@ class Welcome extends CI_Controller {
 		}
 		$conn = null;
 		try{
-			$conn = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","b5931a4eeccf92","1841dc47","fitnessclub");
+			$conn = mysqli_connect("heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com","heysulo","H3LL0W1F1","fitnessclub");;
 		}catch (mysqli_sql_exception $e){
 			diewithhonour();
 		}
@@ -274,7 +258,7 @@ class Welcome extends CI_Controller {
 	public function modifysettings($code=null,$id=null,$value=0){
 		$conn = null;
 		try{
-			$conn = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","b5931a4eeccf92","1841dc47","fitnessclub");
+			$conn = mysqli_connect("heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com","heysulo","H3LL0W1F1","fitnessclub");
 		}catch (mysqli_sql_exception $e){
 			echo "Error occured";
 			die();

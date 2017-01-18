@@ -39,38 +39,10 @@
                     </a>
                 </li>
                 <li>
-                    <a class="accordion-toggle" href="<?php echo base_url(); ?>#">
-                        <span class="sidebar-title">Sales stats</span>
-                        <span class="caret"></span>
+                    <a href="<?php echo base_url(); ?>admin-store">
+                        <span class="sidebar-title">Store</span>
                         <span class="sb-menu-icon fa fa-share-square-o"></span>
                     </a>
-                    <ul class="nav sub-nav">
-                        <li>
-                            <a href="<?php echo base_url(); ?>admin-dashboard2">
-                                Overview 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>admin-sales-stats-products">
-                                Products 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>admin-sales-stats-purchases">
-                                Purchases 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>admin-sales-stats-clients">
-                                Clients 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url(); ?>admin-sales-stats-general-settings">
-                                General Settings 
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a class="accordion-toggle" href="<?php echo base_url(); ?>#">

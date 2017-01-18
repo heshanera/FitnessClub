@@ -136,7 +136,7 @@
                 <?php
                 $conn = null;
                 try{
-                    $conn = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","b5931a4eeccf92","1841dc47","fitnessclub");
+                    $conn = mysqli_connect("heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com","heysulo","H3LL0W1F1","fitnessclub");
                 }catch (mysqli_sql_exception $e){
                     echo "Error occured";
                     die();

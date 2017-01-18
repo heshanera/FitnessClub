@@ -119,7 +119,7 @@ x<!DOCTYPE html>
                 	
                     <ul class="pm-store-filter-system">
                     	<li>
-                        	<p>Showing 1–9 of 16 results</p>
+                        	
                         </li>
                         <li>
                         	<div class="pm-dropdown pm-filter-system">
@@ -130,8 +130,6 @@ x<!DOCTYPE html>
                                 <div class="pm-dropmenu-active" style="display: none;">
                                     <ul>
                                        <li><a href="#">Sort by Popularity</a></li>
-                                       <li><a href="#">Sort by Average Rating</a></li>
-                                       <li><a href="#">Sort by Latest</a></li>
                                        <li><a href="#">Sort by price: High to Low</a></li>
                                        <li><a href="#">Sort by price: Low to High</a></li>
                                     </ul>
@@ -152,309 +150,73 @@ x<!DOCTYPE html>
         
         	<div class="row">
             
-            	<div class="col-lg-4 col-md-4 col-sm-12">
+            	
                 	
-                    <!-- Product 1 -->
-                    <div class="pm-store-item-container">
+                    <!-- Products -->
                     
-                    	<p class="pm-store-item-title">BSN Syntha-6 Protein</p>
-                    
-                    	<div class="pm-store-item-img-container" style="background-image:url(img/store/item1.jpg);" >
+                <?php
+
+                $i = 0;
+                $size = sizeOf($item_name);
+                for($i;$i < $size; $i++)
+                {
                         
-                        	<div class="pm-store-item-diamond-shadow"></div>
-                            <div class="pm-store-item-diamond"></div>
-                            <a class="pm-store-item-diamond-btn fa fa-chevron-up" href="#"></a>	
-                            
-                            <div class="pm-store-item-add-to-cart-container">
-                            
-                            	<div class="pm-store-item-add-to-cart-diamond-shadow"></div>
-                                <div class="pm-store-item-add-to-cart-diamond"></div>
-                                
-                                <a href="#" class="pm-store-item-add-to-cart-btn">Add to cart</a>
-                            
-                            	<div class="pm-store-item-stock-counter">
-                                	<p>42 in stock</p>
-                                    <a href="#" class="pm-store-item-close-btn fa fa-chevron-down"></a>
+                    echo "<div class='col-lg-4 col-md-4 col-sm-12'>
+                        
+                        <div class='pm-store-item-container'>
+
+                            <p class='pm-store-item-title'>"; echo $item_name[$i];  echo "</p>
+
+                            <div class='pm-store-item-img-container' style='background-image:url(img/store/";echo $image[$i]; echo ");' >
+
+                                <div class='pm-store-item-diamond-shadow'></div>
+                                <div class='pm-store-item-diamond'></div>
+                                <a class='pm-store-item-diamond-btn fa fa-chevron-up' href='#'></a>	
+
+                                <div class='pm-store-item-add-to-cart-container'>
+
+                                <div class='pm-store-item-add-to-cart-diamond-shadow'></div>
+                                <div class='pm-store-item-add-to-cart-diamond'></div>
+
+                                <a href='#' class='pm-store-item-add-to-cart-btn'>Add to cart</a>
+
+                                <div class='pm-store-item-stock-counter'>
+                                            <p>"; echo $stock[$i]; echo" in stock</p>
+                                        <a href='#' class='pm-store-item-close-btn fa fa-chevron-down'></a>
                                 </div>
-                            
+
                             </div>
-                        
-                        </div>
-                        
-                        <div class="pm-store-item-desc">
-                        	
-                            <p class="tags">Collection: <a href="#">supplements</a></p>
-                            
-                            
-                            <div class="pm-store-item-divider">
-                            	<div class="pm-store-item-divider-diamond"></div>
+
                             </div>
-                            
-                            <p class="pm-store-item-price">$19.99</p>
-                            
-                        </div>
-                        
-                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
-                    </div>
-                    <!-- Product 1 end -->
-                    
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                	
-                    <!-- Product 2 -->
-                    <div class="pm-store-item-container">
-                    
-                    	<p class="pm-store-item-title">Harbinger : FlexFit gloves</p>
-                    
-                    	<div class="pm-store-item-img-container" style="background-image:url(img/store/item2.jpg);" >
-                        
-                        	<div class="pm-store-item-diamond-shadow"></div>
-                            <div class="pm-store-item-diamond"></div>
-                            <a class="pm-store-item-diamond-btn fa fa-chevron-up" href="#"></a>	
-                            
-                            <div class="pm-store-item-add-to-cart-container">
-                            
-                            	<div class="pm-store-item-add-to-cart-diamond-shadow"></div>
-                                <div class="pm-store-item-add-to-cart-diamond"></div>
-                                
-                                <a href="#" class="pm-store-item-add-to-cart-btn">Add to cart</a>
-                            
-                            	<div class="pm-store-item-stock-counter">
-                                	<p>67 in stock</p>
-                                    <a href="#" class="pm-store-item-close-btn fa fa-chevron-down"></a>
+
+                            <div class='pm-store-item-desc'>
+
+
+
+                                <div class='pm-store-item-divider'>
+                                    <div class='pm-store-item-divider-diamond'></div>
                                 </div>
-                            
+
+                                <p class='pm-store-item-price'> Rs "; echo $price[$i]; echo "</p>
+
                             </div>
-                        
+
+                            <a href='storeProduct' class='pm-square-btn store-btn'>View Details</a>
                         </div>
-                        
-                        <div class="pm-store-item-desc">
-                        	
-                            <p class="tags">Collection: <a href="#">equipment</a>, <a href="#">bodywear</a></p>
+                    </div>";        
                             
-                            
-                            <div class="pm-store-item-divider">
-                            	<div class="pm-store-item-divider-diamond"></div>
-                            </div>
-                            
-                            <p class="pm-store-item-price">$29.99</p>
-                            
-                        </div>
-                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
-                    </div>
-                    <!-- Product 2 end -->
+                }
+
+                ?>
+                <!-- Product end -->
                     
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                	
-                    <!-- Product 3 -->
-                    <div class="pm-store-item-container">
-                    
-                    	<p class="pm-store-item-title">BSN Syntha-6 Protein</p>
-                    
-                    	<div class="pm-store-item-img-container" style="background-image:url(img/store/item3.jpg);" >
-                        
-                        	<div class="pm-store-item-diamond-shadow"></div>
-                            <div class="pm-store-item-diamond"></div>
-                            <a class="pm-store-item-diamond-btn fa fa-chevron-up" href="#"></a>	
-                            
-                            <div class="pm-store-item-add-to-cart-container">
-                            
-                            	<div class="pm-store-item-add-to-cart-diamond-shadow"></div>
-                                <div class="pm-store-item-add-to-cart-diamond"></div>
-                                
-                                <a href="#" class="pm-store-item-add-to-cart-btn">Add to cart</a>
-                            
-                            	<div class="pm-store-item-stock-counter">
-                                	<p>32 in stock</p>
-                                    <a href="#" class="pm-store-item-close-btn fa fa-chevron-down"></a>
-                                </div>
-                            
-                            </div>
-                        
-                        </div>
-                        
-                        <div class="pm-store-item-desc">
-                        	
-                            <p class="tags">Collection: <a href="#">supplements</a></p>
-                            
-                            
-                            <div class="pm-store-item-divider">
-                            	<div class="pm-store-item-divider-diamond"></div>
-                            </div>
-                            
-                            <p class="pm-store-item-price"><strike>$49.99</strike> $39.99</p>
-                            
-                        </div>
-                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
-                    </div>
-                    <!-- Product 3 end -->
-                    
-                </div>
-                
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                	
-                    <!-- Product 4 -->
-                    <div class="pm-store-item-container">
-                    
-                    	<p class="pm-store-item-title">Everlast MMA Grappling Gloves</p>
-                    
-                    	<div class="pm-store-item-img-container" style="background-image:url(img/store/item4.jpg);" >
-                        
-                        	<div class="pm-store-item-diamond-shadow"></div>
-                            <div class="pm-store-item-diamond"></div>
-                            <a class="pm-store-item-diamond-btn fa fa-chevron-up" href="#"></a>	
-                            
-                            <div class="pm-store-item-add-to-cart-container">
-                            
-                            	<div class="pm-store-item-add-to-cart-diamond-shadow"></div>
-                                <div class="pm-store-item-add-to-cart-diamond"></div>
-                                
-                                <a href="#" class="pm-store-item-add-to-cart-btn">Add to cart</a>
-                            
-                            	<div class="pm-store-item-stock-counter">
-                                	<p>48 in stock</p>
-                                    <a href="#" class="pm-store-item-close-btn fa fa-chevron-down"></a>
-                                </div>
-                            
-                            </div>
-                        
-                        </div>
-                        
-                        <div class="pm-store-item-desc">
-                        	
-                            <p class="tags">Collection: <a href="#">boxing</a>, <a href="#">MMA</a></p>
-                            
-                            
-                            <div class="pm-store-item-divider">
-                            	<div class="pm-store-item-divider-diamond"></div>
-                            </div>
-                            
-                            <p class="pm-store-item-price">$39.99</p>
-                            
-                        </div>
-                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
-                    </div>
-                    <!-- Product 4 end -->
-                    
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                	
-                    <!-- Product 5 -->
-                    <div class="pm-store-item-container">
-                    
-                    	<p class="pm-store-item-title">Schiek waist belt</p>
-                    
-                    	<div class="pm-store-item-img-container" style="background-image:url(img/store/item5.jpg);" >
-                        
-                        	<div class="pm-store-item-diamond-shadow"></div>
-                            <div class="pm-store-item-diamond"></div>
-                            <a class="pm-store-item-diamond-btn fa fa-chevron-up" href="#"></a>	
-                            
-                            <div class="pm-store-item-add-to-cart-container">
-                            
-                            	<div class="pm-store-item-add-to-cart-diamond-shadow"></div>
-                                <div class="pm-store-item-add-to-cart-diamond"></div>
-                                
-                                <a href="#" class="pm-store-item-add-to-cart-btn">Add to cart</a>
-                            
-                            	<div class="pm-store-item-stock-counter">
-                                	<p>55 in stock</p>
-                                    <a href="#" class="pm-store-item-close-btn fa fa-chevron-down"></a>
-                                </div>
-                            
-                            </div>
-                        
-                        </div>
-                        
-                        <div class="pm-store-item-desc">
-                        	
-                            <p class="tags">Collection: <a href="#">equipment</a>, <a href="#">bodywear</a></p>
-                            
-                            <div class="pm-store-item-divider">
-                            	<div class="pm-store-item-divider-diamond"></div>
-                            </div>
-                            
-                            <p class="pm-store-item-price">$24.99</p>
-                            
-                        </div>
-                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
-                    </div>
-                    <!-- Product 5 end -->
-                    
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                	
-                    <!-- Product 6 -->
-                    <div class="pm-store-item-container">
-                    
-                    	<p class="pm-store-item-title">Gold Standard WHEY Protein</p>
-                    
-                    	<div class="pm-store-item-img-container" style="background-image:url(img/store/item6.jpg);" >
-                        
-                        	<div class="pm-store-item-diamond-shadow"></div>
-                            <div class="pm-store-item-diamond"></div>
-                            <a class="pm-store-item-diamond-btn fa fa-chevron-up" href="#"></a>	
-                            
-                            <div class="pm-store-item-add-to-cart-container">
-                            
-                            	<div class="pm-store-item-add-to-cart-diamond-shadow"></div>
-                                <div class="pm-store-item-add-to-cart-diamond"></div>
-                                
-                                <a href="#" class="pm-store-item-add-to-cart-btn">Add to cart</a>
-                            
-                            	<div class="pm-store-item-stock-counter">
-                                	<p>82 in stock</p>
-                                    <a href="#" class="pm-store-item-close-btn fa fa-chevron-down"></a>
-                                </div>
-                            
-                            </div>
-                        
-                        </div>
-                        
-                        <div class="pm-store-item-desc">
-                        	
-                            <p class="tags">Collection: <a href="#">supplements</a></p>
-                            
-                            
-                            <div class="pm-store-item-divider">
-                            	<div class="pm-store-item-divider-diamond"></div>
-                            </div>
-                            
-                            <p class="pm-store-item-price"><strike>$49.99</strike> $39.99</p>
-                            
-                        </div>
-                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
-                    </div>
-                    <!-- Product 6 end -->
-                    
-                </div>
-                
             </div>
         
         </div>
         <!-- PANEL 2 end -->
         
         <!-- PANEL 3 -->
-        <div class="container pm-containerPadding-top-30 pm-containerPadding-bottom-80">
-        
-        	<div class="row">
-            
-            	<div class="col-lg-12">
-                	
-                    <ul class="pm-store-paging-system">
-                    	<li><a href="#" class="fa fa-angle-left"></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#" class="fa fa-angle-right"></a></li>
-                    </ul>
-                    
-                </div>
-            
-            </div>
-        
-        </div>
+       
         
         <!-- PANEL 3 end -->
         

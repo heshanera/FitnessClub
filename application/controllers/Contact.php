@@ -21,48 +21,19 @@ class Contact extends CI_Controller {
 	// Show form in view page i.e view_page.php
     public function index() 
     {
-       
+        
     }
 
     // When user submit data on view page, Then this function store data in array.
     public function submitMessage() 
     {
-     /*   
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "gym";
-        */
-        
-        
-        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-        $username = "b5931a4eeccf92";
-        $password = "1841dc47";
-        $dbname = "fitnessclub";
-        
-        
-        /*
-        echo $form_data['first_name'].'<br>';
-        echo $form_data['last_name'].'<br>';
-        echo $form_data['email'].'<br>';
-        echo $form_data['phone'].'<br>';
-        echo $form_data['message'].'<br>';
-        echo $form_data['security_code'].'<br>';
-         */
-        
-        
+     
         $form_data = $this->input->post();
         
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        } 
-
-        $sql = "SELECT message_id FROM visitor_message WHERE message_id = (SELECT MAX(message_id) FROM visitor_message);";
-        $result = $conn->query($sql);
         $mess_id = 0;
+        $this->db->select_max('message_id');
+        $result = $this->db->get('visitor_message');
+        
 
         if (($result->num_rows) > 0) {
             // output data of each row
@@ -80,9 +51,11 @@ class Contact extends CI_Controller {
         
         // Checking for previous messages //
 
-        $sql = "SELECT message, message_id FROM visitor_message WHERE email = '".$email."';";
-        $result = $conn->query($sql);
+        $this->db->select("message, message_id");
+        $this->db->where('email', $email);
+        $result = $this->db->get('visitor_message');
 
+        
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
@@ -100,10 +73,10 @@ class Contact extends CI_Controller {
 
 
 
-            if ($conn->query($sql2) === TRUE) {
+            if ($this->db->query($sql2) === TRUE) {
                 echo "<h1>".$form_data["first_name"].",<br> Your message successfully submitted!</h1>";
             } else {
-                echo "Error updating record: " . $conn->error;
+                echo "Error updating record: ";
             } 
 
         } else {
@@ -118,20 +91,18 @@ class Contact extends CI_Controller {
                             .$message."','"
                             .$date."');";
 
-            if ($conn->query($sql) === TRUE) 
+            if ($this->db->query($sql) === TRUE) 
             {
                 echo "<h1>".$_POST["first_name"].",<br> Your message successfully submitted!</h1>";
 
             } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                echo "Error: " . $sql . "<br>";
             }
         }
         
         
-        $conn->close();
         
-        $baseUrl = $this->config->base_url();
-        header('Location:'.$baseUrl.'contact');
+        header('Location:'.$this->config->base_url().'contact');
         
     } 
 

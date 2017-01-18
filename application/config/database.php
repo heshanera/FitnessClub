@@ -73,15 +73,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+//mysqli_connect("heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com","heysulo","H3LL0W1F1","fitnessclub");
+
 $db['default'] = array(
 	'dsn'	=> '',
     
     
-	'hostname' => 'ap-cdbr-azure-southeast-b.cloudapp.net',
-	'username' => 'b5931a4eeccf92',
-	'password' => '1841dc47',
+	'hostname' => 'heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com',
+	'username' => 'heysulo',
+	'password' => 'H3LL0W1F1',
 	'database' => 'fitnessclub',
     
+     
     /*
         'hostname' => 'localhost',
 	'username' => 'root',
@@ -89,7 +92,7 @@ $db['default'] = array(
 	'database' => 'gym',
     */
     
-        'dbdriver' => 'mysqli',
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

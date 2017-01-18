@@ -209,16 +209,7 @@
                         <textarea name="message" class="pm-form-textarea" cols="50" rows="10" placeholder="Message *" required></textarea>
                     </div>
 		
-                        
-                        
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="pm_captcha_box">
-                            <p>Security Code:</p>
-                            <img src="<?php echo base_url(); ?>js/ajax-contact/CaptchaSecurityImagesbb55.jpg?width=125&amp;height=50&amp;characters=5" /><br />
-                            <div style="padding-top:2px;"><input class="pm_s_security_code pm-form-textfield" name="security_code" type="text" id="security_code" maxlength="5" /></div>
-                        </div>
-                    </div>
-
+                    
                     <div class="col-lg-12 col-md-12 col-sm-12 pm-center">
                         <input type="submit" value="Submit Form" name="" class="pm-form-submit-btn" id="pm-contact-form-btn">
                         <div id="pm-contact-form-response"></div>

@@ -78,5 +78,5 @@ $route['admin-charts-highcharts'] = 'Welcome/adminChart3';
 $route['admin-sales-stats-clients'] = 'Welcome/adminClients';
 $route['admin-sales-stats-general-settings'] = 'Welcome/adminGeneralSettings';
 $route['admin-sales-stats-products'] = 'Welcome/adminProducts';
-$route['admin-sales-stats-purchases'] = 'Welcome/adminPurchases';
-$route['admin-dashboard2'] = 'Welcome/adminDashboard';
+$route['admin-add-to-store'] = 'Welcome/adminAddToStore';
+$route['admin-store'] = 'Welcome/adminStore';
