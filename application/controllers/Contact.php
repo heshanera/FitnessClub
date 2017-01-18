@@ -28,10 +28,10 @@ class Contact extends CI_Controller {
     public function submitMessage() 
     {
         /*
-        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-        $username = "b5931a4eeccf92";
-        $password = "1841dc47";
-        $dbname = "fitnessclub";
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "gym";
         */
         //mysqli_connect("heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com","heysulo","H3LL0W1F1","fitnessclub");
         $servername = "heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com";
@@ -75,8 +75,8 @@ class Contact extends CI_Controller {
         $message = $form_data["message"];
         $email = $form_data["email"];
         $date = date("Y-m-d H:i:s");
-        $read = 0;
-
+        $rd = 0;
+        
         // Checking for previous messages //
 
         $sql = "SELECT message, message_id FROM visitor_message WHERE email = '".$email."';";
@@ -119,7 +119,7 @@ class Contact extends CI_Controller {
 
             if ($conn->query($sql) === TRUE) 
             {
-                echo "<h1>".$_POST["name"].",<br> Your message successfully submitted!</h1>";
+                echo "<h1>".$_POST["first_name"].",<br> Your message successfully submitted!</h1>";
 
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
@@ -147,7 +147,6 @@ class Contact extends CI_Controller {
         $this->email->message($message);
 
         $this->email->send();
-        
     }        
 
 }        

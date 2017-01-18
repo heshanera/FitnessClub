@@ -81,6 +81,14 @@ $db['default'] = array(
 	'username' => 'heysulo',
 	'password' => 'H3LL0W1F1',
 	'database' => 'fitnessclub',
+     
+    /*
+        'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'gym',
+    */
+    
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

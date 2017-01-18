@@ -1088,7 +1088,26 @@
                                                     var email = document.getElementById("popEmail").innerHTML;
                                                     var message = document.getElementById("emailMessage").value;
                    
-                                                    
+                                                    /*
+                   
+                                                    var xhttp = new XMLHttpRequest();
+                                                    xhttp.onreadystatechange = function() {
+                                                        if (this.readyState == 4 && this.status == 200) {
+                                                            if(this.responseText !="success"){
+                                                                
+                                                            }
+                                                        }
+                                                    };
+                                                    xhttp.open("POST", "sendMail/"+email+"/"+message, true);
+                                                    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                                    xhttp.send();
+                                                    */
+                                                   /*
+                                                   window.location.href = "<?php echo site_url('Welcome/sendMail/'+email+'/'+message);?>"; 
+                                                       
+
+                                                    alert(message+" -> "+email);
+                                                    */
                                                     
                                                     
                                                 }
