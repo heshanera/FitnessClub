@@ -33,10 +33,10 @@ class Contact extends CI_Controller {
         $password = "1841dc47";
         $dbname = "fitnessclub";
         */
-        
-        $servername = "ap-cdbr-azure-southeast-b.cloudapp.net";
-        $username = "b5931a4eeccf92";
-        $password = "1841dc47";
+        //mysqli_connect("heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com","heysulo","H3LL0W1F1","fitnessclub");
+        $servername = "heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com";
+        $username = "heysulo";
+        $password = "H3LL0W1F1";
         $dbname = "fitnessclub";
         
         
