@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['gallery'] = 'welcome/gallery';
 $route['schedules'] = 'welcome/schedules';
 $route['store'] = 'welcome/store';
+$route['storeProduct'] = 'welcome/storeProduct';
 $route['contact'] = 'welcome/contact';
 $route['about-us'] = 'welcome/about';
 $route['programs'] = 'welcome/programs';

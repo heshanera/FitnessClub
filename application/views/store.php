@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+x<!DOCTYPE html>
 <html lang="en">
   
 <!-- Mirrored from projects.pulsarmedia.ca/energy/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Nov 2016 13:38:57 GMT -->
@@ -194,7 +194,7 @@
                             
                         </div>
                         
-                        <a href="store-product.html" class="pm-square-btn store-btn">View Details</a>
+                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
                     </div>
                     <!-- Product 1 end -->
                     
@@ -240,7 +240,7 @@
                             <p class="pm-store-item-price">$29.99</p>
                             
                         </div>
-                        <a href="store-product.html" class="pm-square-btn store-btn">View Details</a>
+                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
                     </div>
                     <!-- Product 2 end -->
                     
@@ -286,7 +286,7 @@
                             <p class="pm-store-item-price"><strike>$49.99</strike> $39.99</p>
                             
                         </div>
-                        <a href="store-product.html" class="pm-square-btn store-btn">View Details</a>
+                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
                     </div>
                     <!-- Product 3 end -->
                     
@@ -333,7 +333,7 @@
                             <p class="pm-store-item-price">$39.99</p>
                             
                         </div>
-                        <a href="store-product.html" class="pm-square-btn store-btn">View Details</a>
+                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
                     </div>
                     <!-- Product 4 end -->
                     
@@ -378,7 +378,7 @@
                             <p class="pm-store-item-price">$24.99</p>
                             
                         </div>
-                        <a href="store-product.html" class="pm-square-btn store-btn">View Details</a>
+                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
                     </div>
                     <!-- Product 5 end -->
                     
@@ -424,7 +424,7 @@
                             <p class="pm-store-item-price"><strike>$49.99</strike> $39.99</p>
                             
                         </div>
-                        <a href="store-product.html" class="pm-square-btn store-btn">View Details</a>
+                        <a href="storeProduct" class="pm-square-btn store-btn">View Details</a>
                     </div>
                     <!-- Product 6 end -->
                     
