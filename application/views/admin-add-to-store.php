@@ -715,30 +715,12 @@
         <header id="topbar" class="ph10">
             <div class="topbar-left">
                 <ul class="nav nav-list nav-list-topbar pull-left">
-                    <li>
-                        <a href="<?php echo base_url(); ?>dashboard2.html">Overview</a>
-                    </li>
-                    <li class="active">
-                        <a href="<?php echo base_url(); ?>sales-stats-products.html">Products</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>sales-stats-purchases.html">Orders</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>sales-stats-clients.html">Clients</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>sales-stats-general-settings.html">Settings</a>
-                    </li>
+                   
                 </ul>
             </div>
             <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                <a href="<?php echo base_url(); ?>sales-stats-purchases.html" class="btn btn-primary btn-sm ml10" title="New Order">
-                    <span class="fa fa-plus pr5"></span><span class="fa fa-file-o pr5"></span></a>
-                <a href="<?php echo base_url(); ?>sales-stats-products.html" class="btn btn-primary btn-sm ml10" title="New Product">
-                    <span class="fa fa-plus pr5"></span><span class="fa fa-shopping-cart pr5"></span></a>
-                <a href="<?php echo base_url(); ?>sales-stats-clients.html" class="btn btn-primary btn-sm ml10" title="New User">
-                    <span class="fa fa-plus pr5"></span><span class="fa fa-user pr5"></span></a>
+                <a href="<?php echo base_url(); ?>admin-store" class="btn btn-primary btn-sm ml10" title="New Product">
+                    <span class="fa fa-shopping-cart pr5"></span></a>
             </div>
         </header>
         <!-- /Topbar -->
@@ -746,98 +728,7 @@
         <!-- Content -->
         <section id="content" class="table-layout animated fadeIn">
 
-            <!-- Column Left -->
-            <aside class="chute chute-left chute290 chute-icon-style" data-chute-height="match">
-                <div class="chute-icon"></div>
-                <div class="chute-of-ht"></div>
-                <div class="scroller-chute scroller-primary chute-fh-xs mrn">
-                    <!-- Menu Block -->
-                    <div class="allcp-form theme-primary">
-
-                        <h5 class="pln"> Filter Products</h5>
-
-                        <h6 class="mb15"> by SKU</h6>
-
-                        <div class="section mb20">
-                            <label for="order-id" class="field prepend-icon">
-                                <input type="text" name="order-id" id="order-id" class="gui-input"
-                                       placeholder="Product SKU #">
-                                <span class="field-icon">
-                                    <i class="fa fa-tag"></i>
-                                </span>
-                            </label>
-                        </div>
-
-                        <h6 class="mb15"> by price</h6>
-
-                        <div class="section row mb20">
-                            <div class="col-md-6 ph10">
-                                <label for="price1" class="field prepend-icon mb5">
-                                    <input type="text" name="price1" id="price1" class="gui-input" placeholder="0">
-                                    <span class="field-icon">
-                                        <i class="fa fa-usd"></i>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="col-md-6 ph10">
-                                <label for="price2" class="field prepend-icon">
-                                    <input type="text" name="price2" id="price2" class="gui-input" placeholder="1000">
-                                    <span class="field-icon">
-                                        <i class="fa fa-usd"></i>
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <h6 class="mb15"> by date</h6>
-
-                        <div class="section row mb20">
-                            <div class="col-md-6 ph10">
-                                <label for="datepicker1" class="field prepend-icon mb5">
-                                    <input type="text" id="datepicker1" name="datepicker1"
-                                           class="gui-input fs13"
-                                           placeholder="From">
-                                    <span class="field-icon">
-                                        <i class="fa fa-calendar"></i>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="col-md-6 ph10">
-                                <label for="datepicker2" class="field prepend-icon">
-                                    <input type="text" id="datepicker2" name="datepicker2"
-                                           class="gui-input fs13"
-                                           placeholder="To">
-                                    <span class="field-icon">
-                                        <i class="fa fa-calendar"></i>
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <h6 class="mb15"> by category</h6>
-
-                        <div class="section mb20">
-                            <label class="field select">
-                                <select id="filter-categories" name="filter-categories">
-                                    <option value="0" selected="selected">Filter by Categories</option>
-                                    <option value="1">iPhone</option>
-                                    <option value="2">iPad</option>
-                                    <option value="3">iMac</option>
-                                </select>
-                                <i class="arrow double"></i>
-                            </label>
-                        </div>
-
-                        <hr class="short">
-
-                        <div class="section pb30 clr">
-                            <button class="btn btn-primary pull-right ph30" type="button">Search</button>
-                        </div>
-
-                    </div>
-                </div>
-            </aside>
-            <!-- /Column Left -->
+            
 
             <!-- Column Center -->
             <div class="chute chute-center pt30">
@@ -846,14 +737,7 @@
                 <div class="panel mb25 mt5">
                     <div class="panel-heading">
                         <span class="panel-title hidden-xs"> Add New Product</span>
-                        <ul class="nav panel-tabs-border panel-tabs">
-                            <li class="active">
-                                <a href="<?php echo base_url(); ?>#tab1_1" data-toggle="tab">General</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url(); ?>#tab1_2" data-toggle="tab">Details</a>
-                            </li>
-                        </ul>
+                        
                     </div>
                     <div class="panel-body pn">
                         <div class="tab-content pn br-n allcp-form theme-primary">
@@ -901,7 +785,38 @@
                                                 </span>
                                             </label>
                                         </div>
+                                        <div class="section mb10">
+                                        <label for="product-quantity" class="field prepend-icon">
+                                            <input type="text" name="product-quantity" id="product-quantity"
+                                                   class="gui-input"
+                                                   placeholder="Quantity">
+                                            <span class="field-icon">
+                                                <i class="fa fa-sort-amount-desc"></i>
+                                            </span>
+                                        </label>
                                     </div>
+                                     <div class="section mb10">
+                                        <label for="product-price" class="field prepend-icon">
+                                            <input type="text" name="product-price" id="product-price"
+                                                   class="gui-input"
+                                                   placeholder="Price...">
+                                            <span class="field-icon">
+                                                <i class="fa fa-usd"></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                        
+                                    <hr class="short alt">
+
+                                    <div class="section mbn text-right">
+                                        <p class="text-right">
+                                            <button class="btn btn-primary" type="button">Add product</button>
+                                        </p>
+                                    </div> 
+                                        
+                                    </div>
+                                    
+                                    
                                 </div>
 
 
@@ -909,32 +824,10 @@
                             <div id="tab1_2" class="tab-pane">
 
                                 <div class="section row">
-                                    <div class="col-md-4 ph10">
-                                        <label for="product-category" class="field select">
-                                            <select id="product-category" name="product-category">
-                                                <option value="0" selected="selected">Category...</option>
-                                                <option value="1">iPhone</option>
-                                                <option value="2">iPad</option>
-                                                <option value="3">iMac</option>
-                                            </select>
-                                            <i class="arrow double"></i>
-                                        </label>
-                                    </div>
+                                    
                                     <!-- /section -->
 
-                                    <div class="col-md-4 ph10">
-                                        <label class="field select">
-                                            <select id="product-status" name="product-status">
-                                                <option value="0" selected="selected">Availability</option>
-                                                <option value="1">Available</option>
-                                                <option value="2">Unavailable</option>
-                                                <option value="2">Preorder</option>
-                                                <option value="3">Discontinued</option>
-                                                <option value="4">Out of Stock</option>
-                                            </select>
-                                            <i class="arrow double"></i>
-                                        </label>
-                                    </div>
+                                    
                                     <!-- /section -->
 
                                     <div class="col-md-4 ph10">
@@ -963,38 +856,10 @@
                                             </span>
                                         </label>
                                     </div>
-                                    <!-- /section -->
-
-                                    <div class="col-md-4 ph10">
-                                        <label for="product-vendor" class="field prepend-icon">
-                                            <input type="text" name="product-vendor" id="product-vendor"
-                                                   class="gui-input"
-                                                   placeholder="Vendor...">
-                                            <span class="field-icon">
-                                                <i class="fa fa-building"></i>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <!-- /section -->
-
-                                    <div class="col-md-4 ph10">
-                                        <label for="product-sku" class="field prepend-icon">
-                                            <input type="text" name="product-sku" id="product-sku" class="gui-input"
-                                                   placeholder="SKU...">
-                                            <span class="field-icon">
-                                                <i class="fa fa-barcode"></i>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <!-- /section -->
+                                    
 
                                 </div>
-                                <!-- /Section -->
-
-                                <div class="section br10">
-                                    <input id="tagsinput" type="text" value="Apple, Device, Gadget, iPhone, iPad, iMac">
-                                </div>
-                                <!-- /Section -->
+                               
 
                                 <hr class="short alt">
 
@@ -1026,17 +891,7 @@
                                     <i class="arrow double"></i>
                                 </label>
                             </div>
-                            <div class="col-md-5 pb5">
-                                <label class="field select">
-                                    <select id="filter-category" name="filter-category">
-                                        <option value="0">Filter by Category</option>
-                                        <option value="1">iPhone</option>
-                                        <option value="2">iPad</option>
-                                        <option value="3">iMac</option>
-                                    </select>
-                                    <i class="arrow"></i>
-                                </label>
-                            </div>
+                            
                             <div class="col-md-5 pb5">
                                 <label class="field select">
                                     <select id="filter-status" name="filter-status">
@@ -1059,7 +914,6 @@
                                     <th class="text-center"></th>
                                     <th class="">Image</th>
                                     <th class="">Product Title</th>
-                                    <th class="">SKU</th>
                                     <th class="">Price</th>
                                     <th class="">Stock</th>
                                     <th class="text-right">Status</th>
@@ -1067,504 +921,57 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/1.jpg">
-                                    </td>
-                                    <td class="">Apple iPhone 5</td>
-                                    <td class="">#123</td>
-                                    <td class="">$500</td>
-                                    <td class="">300</td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Active
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/2.jpg">
-                                    </td>
-                                    <td class="">Apple iPhone 6</td>
-                                    <td class="">#1234</td>
-                                    <td class="">$600</td>
-                                    <td class="">500</td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Active
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/3.jpg">
-                                    </td>
-                                    <td class="">Apple iPad</td>
-                                    <td class="">#2345</td>
-                                    <td class="">$400</td>
-                                    <td class="">300</td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Active
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/4.jpg">
-                                    </td>
-                                    <td class="">Apple iPad Air</td>
-                                    <td class="">#4563</td>
-                                    <td class="">$800</td>
-                                    <td class="">500</td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Active
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/5.jpg">
-                                    </td>
-                                    <td class="">Apple iMac</td>
-                                    <td class="">#5555</td>
-                                    <td class="">$999</td>
-                                    <td class="">100</td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Active
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/6.jpg">
-                                    </td>
-                                    <td class="">Apple iMac 27"</td>
-                                    <td class="">#5656</td>
-                                    <td class="">$1999</td>
-                                    <td class="">300</td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-success br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Active
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/7.jpg">
-                                    </td>
-                                    <td class="">Apple iPhone 4S</td>
-                                    <td class="">#6666</td>
-                                    <td class="">$300</td>
-                                    <td class="text-warning">
-                                        <b>15</b>
-                                    </td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-warning br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Disabled
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#" class="text-warning">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/8.jpg">
-                                    </td>
-                                    <td class="">Apple iPhone 6S 16GB</td>
-                                    <td class="">#1010</td>
-                                    <td class="">$995</td>
-                                    <td class="text-danger">
-                                        <b>0 - Sold Out</b>
-                                    </td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-danger br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Sold Out
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#" class="text-warning">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/9.jpg">
-                                    </td>
-                                    <td class="">Apple iPhone 6S 32GB</td>
-                                    <td class="">#1011</td>
-                                    <td class="">$1195</td>
-                                    <td class="text-danger">
-                                        <b>0 - Sold Out</b>
-                                    </td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-danger br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Sold Out
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <label class="option block mn">
-                                            <input type="checkbox" name="inputname" value="FR">
-                                            <span class="checkbox mn"></span>
-                                        </label>
-                                    </td>
-                                    <td class="w100">
-                                        <img class="img-responsive mw40 ib mr10" alt="" title="user"
-                                             src="<?php echo base_url(); ?>assets/img/pages/products/10.jpg">
-                                    </td>
-                                    <td class="">Apple iPhone 6S 64GB</td>
-                                    <td class="">#1012</td>
-                                    <td class="">$1395</td>
-                                    <td class="text-danger">
-                                        <b>0 - Sold Out</b>
-                                    </td>
-                                    <td class="text-right">
-                                        <div class="btn-group text-right">
-                                            <button type="button"
-                                                    class="btn btn-danger br2 btn-xs fs12 dropdown-toggle"
-                                                    data-toggle="dropdown" aria-expanded="false"> Sold Out
-                                                <span class="caret ml5"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Delete</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Archive</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Active</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Inactive</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>#">Low Stock</a>
-                                                </li>
-                                                <li class="active">
-                                                    <a href="<?php echo base_url(); ?>#">Out of Stock</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
+                                
+                                    <?php    
+                                        
+                                        
+                                        $i = 0;
+                                        $size = sizeOf($item_name);
+                                        for($i;$i < $size; $i++)
+                                        {
+                                        
+                                            echo 
+                                            "<tr>
+                                                <td class='text-center'>
+                                                    <label class='option block mn'>
+                                                        
+                                                    </label>
+                                                </td>
+                                                <td class='w100'>
+                                                    <img class='img-responsive mw40 ib mr10' title='user' alt=''
+                                                         src='"; echo base_url(); echo "img/store/"; echo $image[$i]; echo "'>
+                                                </td>
+                                                <td class=''>"; echo $item_name[$i]; echo "</td>
+                                                <td class=''>Rs "; echo $price[$i]; echo "</td>
+                                                <td class=''>"; if ( $stock[$i] == 0 ) echo "0 - Sold Out"; else echo $stock[$i]; echo "</td>
+                                                <td class='text-right'>
+                                                    <div class='btn-group text-right'>
+                                                        <button type='button'";
+                                                                
+                                                                    
+                                                                if ( $stock[$i] == 0 ) {
+                                                                    
+                                                                    echo    "class='btn btn-danger br2 btn-xs fs12' style='width:80px'> Sold Out";
+                                                                    
+                                                                } else if ( $stock[$i] < 5 ) {
+                                                                    
+                                                                    echo    "class='btn btn-warning br2 btn-xs fs12' style='width:80px'> Low Stock";
+                                                                    
+                                                                } else {
+                                                                    
+                                                                    echo    "class='btn btn-success br2 btn-xs fs12' style='width:80px'> Active";
+                                                                }
+                                                
+                                                            echo "<span class=''></span>
+                                                        </button>
+                                                        
+                                                    </div>
+                                                </td>
+                                            </tr>";
+                                        }
+                                        
+                                        ?> 
+                                    
                                 </tbody>
                             </table>
                         </div>
