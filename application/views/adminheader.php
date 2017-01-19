@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top">
     <div class="navbar-logo-wrapper dark bg-dark">
-        <a class="navbar-logo-image" href="<?php echo base_url(); ?>index-2.html">
+        <a class="navbar-logo-image" href="<?php echo base_url(); ?>admin">
             <img src="<?php echo base_url(); ?>assets/img/logo.png" alt="" class="sb-l-o-logo">
             <img src="<?php echo base_url(); ?>assets/img/logo_small.png" alt="" class="sb-l-m-logo">
         </a>
