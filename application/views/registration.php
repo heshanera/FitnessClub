@@ -358,7 +358,7 @@
             
         </div>
     
-    </div><!-- /pm_layout-wrapper -->
+    <!-- /pm_layout-wrapper -->
     
     <!-- Bootstrap core JavaScript
     ================================================== -->
