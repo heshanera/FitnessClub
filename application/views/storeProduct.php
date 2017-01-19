@@ -86,7 +86,7 @@
             
             	<div class="pm-sub-header-title-bg post-title">
                 
-                	<p class="pm-sub-header-title post-title">BSN Syntha-6 Protein</p>
+                	<p class="pm-sub-header-title post-title"><?php echo $item_name[0]  ?></p>
                 
                 </div>
                 
@@ -96,7 +96,7 @@
                     
                     <div class="pm-sub-header-breadcrumb-list-container">
                     	<ul class="pm-sub-header-breadcrumb-list">
-                            <li><a href="index-2.html">Home</a> &nbsp; <i class="fa fa-angle-right"></i></li>
+                            <li>Home &nbsp; <i class="fa fa-angle-right"></i></li>
                             <li>Store</li>
                         </ul>
                     </div>
@@ -122,11 +122,11 @@
             
                         <div class="col-lg-12 pm-column-spacing">
                             <div itemprop="breadcrumb" class="woocommerce-breadcrumb pm-woocommerce-breadcrumbs">
-                            <p><a href="#" class="home">Home</a></p>
+                            <p><a href="<?php echo base_url(); ?>" class="home">Home</a></p>
                             <p> / </p>
-                            <p><a href="#">Store</a></p>
+                            <p><a href="<?php echo base_url(); ?>/store">Store</a></p>
                             <p> / </p>
-                            <p>BSN Syntha-6 Protein</p></div>
+                            <p><?php echo $item_name[0]  ?></p></div>
                         </div>
                     
                     </div>
@@ -137,7 +137,7 @@
                             
                         <div class="col-lg-6 col-md-6 col-sm-6 pm-column-spacing">
                             
-                            <div class="pm-woocomm-item-thumb-container" style="background-image:url(img/store/item1.jpg);">
+                            <div class='pm-store-item-img-container' style='background-image:url(<?php echo base_url(); ?>img/store/<?php echo $image[0] ?>);' >
                                 <div class="pm-woocomm-item-sale-tag">Item</div>
                             </div>
                             
@@ -146,21 +146,30 @@
                         </div>
                         
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <p class="pm-woocom-item-title">BSN Syntha-6 Protein</p>
-                            
+                            <p class="pm-woocom-item-title"><?php echo $item_name[0]  ?></p>
                             <ul id="pm-widget-star-rating-single" class="pm-widget-star-rating">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star inactive"></i></li>
-                            </ul>
+                            <?php
                             
+                                $colorStars = $rating[0];
+                                $otherStars = 5-$rating[0];
+                                
+                                for($i = 0; $i < $colorStars; $i++)
+                                {
+                                    echo "<li><i class='fa fa-star'></i></li>";
+                                }
+                                
+                                for($i = 0; $i < $otherStars; $i++)
+                                {
+                                    echo "<li><i class='fa fa-star inactive'></i></li>";
+                                }
+                   
                             
-                            <p class="pm-woocom-item-price">$19.99</p>
+                            ?>
+                            </ul>        
+                            <p class="pm-woocom-item-price">Rs <?php echo $price[0]  ?></p>
                             
                             <div class="pm-woocom-item-short-description">
-                                <p>Loretm ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non adipiscing ligula. Phasellus sed pulvinar nisi. Nunc varius vel magna a pulvinar. Donec luctus rutrum lorem at rutrum. Ut nunc massa, lobortis vel sollicitudin porta, euismod convallis massa. Vestibulum quis diam est. Nunc aliquam risus id ligula rutrum adipiscing. Cras magna ipsum, posuere eu nibh et, rutrum ullamcorper urna. Sed in diam sem. </p>
+                                <p> <?php echo $discription[0]  ?> </p>
                             </div>
                             
                             <div class="pm-woocom-tags-container">
@@ -169,22 +178,15 @@
                             </div>
                             
                             <div class="quantity buttons_added">
-                                <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1" >
-                                <div class="pm-quantity-btns-container">
-                                    <input type="button" class="minus" value="+">
-                                    <input type="button" class="plus" value="-">
-                                    
-                                </div>
-                                
-                                <div class="pm-item-add-to-cart">
-                                    <input type="submit" class="pm-woocomm-submit-btn" value="Add to cart" />
-                                </div>
                                                         
                             </div><!-- quantity buttons end -->
-                            
-                            
+                        
+                            <div class="pm-item-add-to-cart">
+                                    <input type="submit" class="pm-woocomm-submit-btn" value="Add to cart" />
+                            </div>
                             
                         </div>
+                        
                     
                     </div>
                     <!-- /.row -->
@@ -197,93 +199,7 @@
         <!-- PANEL 1 end -->
         
         <!-- PANEL 2 -->
-        <div class="pm-column-container pm-parallax-panel" style="background-color:#182433; background-image:url(img/single-post/author-bg.jpg);" data-stellar-background-ratio="0.5">
         
-        	<div class="container pm-containerPadding80">
-            	<div class="row">
-                	
-                    <div class="col-lg-12">
-                	
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                          <li class="active"><a href="#desc" role="tab" data-toggle="tab">Description</a></li>
-                          <li><a href="#reviews" role="tab" data-toggle="tab">Reviews</a></li>
-                        </ul>
-                        <!-- Nav tabs end -->
-                        
-                        <!-- Tabs -->
-                        <div class="tab-content">
-                          <div class="tab-pane fade in active" id="desc">
-                          
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus convallis nibh at imperdiet. Nunc nunc nulla, aliquet sit amet lorem porta, feugiat finibus dui. Praesent tincidunt eros vel eleifend tincidunt. Vestibulum blandit mauris quis viverra feugiat. Proin sem libero, eleifend eget tortor vitae, sodales luctus orci. Mauris feugiat semper velit, ac aliquet lectus iaculis sit amet. Vivamus euismod sem et ante varius, at suscipit diam luctus. Maecenas vehicula felis eu turpis ullamcorper, nec hendrerit dui blandit. Sed vitae mi eget metus efficitur blandit sed quis felis. Sed vitae orci molestie, tempus nulla aliquet, egestas tellus. Sed suscipit purus odio, eget posuere magna scelerisque posuere. Nulla in eleifend magna.</p> 
-                          </div>
-                          <div class="tab-pane fade" id="reviews">
-                                                  
-                            <div id="pm-product-reviews">
-                                <div id="pm-product-comments">
-                                    <h3>Posted Reviews</h3>
-                            
-                                    
-                                        <ol class="commentlist">
-                                            <li id="li-comment-15" class="comment byuser comment-author-pmedia bypostauthor even thread-even depth-1" itemtype="schema.org/Review" itemscope="" itemprop="reviews">
-                            
-                                                <div class="comment_container" id="comment-15">
-                                                    <img width="60" height="60" class="avatar avatar-60 photo" src="img/blog/01_avatar.jpg" alt="pmedia">
-                                                    <div class="comment-text">
-                                                                        
-                                                            <p class="meta">
-                                                                <strong itemprop="author">Joe Bonucci</strong> &ndash; <time datetime="2014-08-05T21:44:42+00:00" itemprop="datePublished">August 5, 2014</time>
-                                                            </p>
-                                                        
-                                                        <div class="description" itemprop="description"><p>What a great album! I highly recommended this to anyone.</p></div>
-                                                    </div>
-                                                </div>
-                                            </li><!-- #comment-## -->
-                                        </ol>
-                            
-                                        
-                                     </div>
-                            
-                                
-                                    <div id="review_form_wrapper">
-                                        <div id="review_form">
-                                            <div class="comment-respond" id="respond">
-                                            <h3 class="comment-reply-title" id="reply-title">Add a review <small><a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a></small></h3>
-                                            <form class="comment-form" id="commentform" method="post" action="wp.pulsarmedia.ca/quantum/wp-comments-post.php">
-                                            <p class="comment-form-author">
-                                            
-                                            <input type="text" aria-required="true" size="30" value="" name="author" id="author" class="pm-textfield" placeholder="Name">
-                                            </p>
-                                            <p class="comment-form-email">
-                                            
-                                            <input type="text" aria-required="true" size="30" value="" name="email" id="email" class="pm-textfield" placeholder="Email Address">
-                                            </p>
-                                            <p class="comment-form-comment">
-                                            <textarea aria-required="true" rows="8" cols="45" name="comment" id="comment" class="pm-textarea placeholder" placeholder="Comment…" required></textarea>
-                                            </p>
-                                            <p class="form-submit">
-                                            <input type="submit" value="Submit Review" id="submit" name="submit" class="pm-form-submit-btn">
-                                            <input type="hidden" id="comment_post_ID" value="386" name="comment_post_ID">
-                                            <input type="hidden" value="0" id="comment_parent" name="comment_parent">
-                                            </p>
-                                            </form>
-                                            </div><!-- #respond -->
-                                        </div>
-                                    </div>
-                            
-                                
-                                <div class="clear"></div>
-                            </div>
-                            
-                          </div>
-                        </div>
-                        <!-- Tabs end -->
-                        
-                    </div><!-- /.col-lg-12 -->
-                    
-                </div>
-            </div>
-        </div>
         <!-- PANEL 2 end -->
         
         <!-- PANEL 3 -->

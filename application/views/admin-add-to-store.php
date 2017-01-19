@@ -726,13 +726,19 @@
         <!-- /Topbar -->
 
         <!-- Content -->
+        
+        
+         
+        
+        
         <section id="content" class="table-layout animated fadeIn">
-
-            
 
             <!-- Column Center -->
             <div class="chute chute-center pt30">
-
+                
+                <form action="index.php/Store/addNewProduct" method="post" id="pm-add-product">
+                    
+                    
                 <!-- New Product -->
                 <div class="panel mb25 mt5">
                     <div class="panel-heading">
@@ -741,8 +747,7 @@
                     </div>
                     <div class="panel-body pn">
                         <div class="tab-content pn br-n allcp-form theme-primary">
-                            <div id="tab1_1" class="tab-pane active">
-
+                            
                                 <div class="section row mbn">
                                     <div class="col-md-4 ph10">
                                         <div class="fileupload fileupload-new allcp-form" data-provides="fileupload">
@@ -751,10 +756,8 @@
                                             </div>
                                             <div class="row mhn10">
                                                 <div class="col-xs-12 col-sm-7 pr5 ph10">
-                                                    <input type="text" name="name2" id="name2"
-                                                           class="text-center event-name gui-input br-light bg-light"
-                                                           placeholder="Image tags">
-                                                    <label for="name2" class="field-icon"></label>
+                                                    <input type="text" name="image" id="image" class="text-center event-name gui-input br-light bg-light" placeholder="Image tags" required>
+                                                    <label for="image" class="field-icon"></label>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-5 ph10">
                                                     <span class="button button-big btn-primary btn-file btn-block">
@@ -768,41 +771,29 @@
                                     </div>
                                     <div class="col-md-8 ph10">
                                         <div class="section mb10">
-                                            <label for="name21" class="field prepend-icon">
-                                                <input type="text" name="name21" id="name21"
-                                                       class="event-name gui-input br-light light"
-                                                       placeholder="Product Name">
-                                                <span class="field-icon">
-                                                    <i class="fa fa-tag"></i>
-                                                </span>
+                                            <label for="name" class="field prepend-icon">
+                                                <input type="text" name="name" id="name" class="event-name gui-input br-light light" placeholder="Product Name" required>
+                                                <span class="field-icon"> <i class="fa fa-tag"></i> </span>
                                             </label>
                                         </div>
                                         <div class="section mb10">
                                             <label class="field prepend-icon">
-                                                <textarea style="height: 160px;" class="gui-textarea br-light bg-light" id="comment" name="comment" placeholder="Product Description"></textarea>
+                                                <textarea style="height: 160px;" class="gui-textarea br-light bg-light" id="comment" name="comment" placeholder="Product Description" required></textarea>
                                                 <span class="field-icon">
                                                     <i class="fa fa-file"></i>
                                                 </span>
                                             </label>
                                         </div>
                                         <div class="section mb10">
-                                        <label for="product-quantity" class="field prepend-icon">
-                                            <input type="text" name="product-quantity" id="product-quantity"
-                                                   class="gui-input"
-                                                   placeholder="Quantity">
-                                            <span class="field-icon">
-                                                <i class="fa fa-sort-amount-desc"></i>
-                                            </span>
+                                        <label for="quantity" class="field prepend-icon">
+                                            <input type="number" name="quantity" id="quantity" class="gui-input" placeholder="Quantity" required>
+                                            <span class="field-icon"> <i class="fa fa-sort-amount-desc"></i> </span>
                                         </label>
                                     </div>
                                      <div class="section mb10">
-                                        <label for="product-price" class="field prepend-icon">
-                                            <input type="text" name="product-price" id="product-price"
-                                                   class="gui-input"
-                                                   placeholder="Price...">
-                                            <span class="field-icon">
-                                                <i class="fa fa-usd"></i>
-                                            </span>
+                                        <label for="price" class="field prepend-icon">
+                                            <input type="number" name="price" id="price" class="gui-input" placeholder="Price..." required>
+                                            <span class="field-icon"> <i class="fa fa-usd"></i> </span>
                                         </label>
                                     </div>
                                         
@@ -810,7 +801,7 @@
 
                                     <div class="section mbn text-right">
                                         <p class="text-right">
-                                            <button class="btn btn-primary" type="button">Add product</button>
+                                            <input type="submit" value="Add Product" name="" class="btn btn-primary" id="pm-add-product-btn">
                                         </p>
                                     </div> 
                                         
@@ -819,85 +810,23 @@
                                     
                                 </div>
 
-
-                            </div>
-                            <div id="tab1_2" class="tab-pane">
-
-                                <div class="section row">
-                                    
-                                    <!-- /section -->
-
-                                    
-                                    <!-- /section -->
-
-                                    <div class="col-md-4 ph10">
-                                        <label for="product-quantity" class="field prepend-icon">
-                                            <input type="text" name="product-quantity" id="product-quantity"
-                                                   class="gui-input"
-                                                   placeholder="Quantity">
-                                            <span class="field-icon">
-                                                <i class="fa fa-sort-amount-desc"></i>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <!-- /section -->
-
-                                </div>
-                                <!-- /Section -->
-
-                                <div class="section row">
-                                    <div class="col-md-4 ph10">
-                                        <label for="product-price" class="field prepend-icon">
-                                            <input type="text" name="product-price" id="product-price"
-                                                   class="gui-input"
-                                                   placeholder="Price...">
-                                            <span class="field-icon">
-                                                <i class="fa fa-usd"></i>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    
-
-                                </div>
-                               
-
-                                <hr class="short alt">
-
-                                <div class="section mbn text-right">
-                                    <p class="text-right">
-                                        <button class="btn btn-primary" type="button">Add product</button>
-                                    </p>
-                                </div>
-                                <!-- /section -->
-
-                            </div>
                         </div>
                     </div>
                 </div>
+                
+                </form>
 
                 <!-- Recent Orders -->
                 <div class="panel">
                     <div class="panel-menu p12 allcp-form theme-primary mtn">
                         <div class="row">
-                            <div class="col-md-2 pb5">
-                                <label class="field select">
-                                    <select id="bulk-action" name="bulk-action">
-                                        <option value="0">Actions</option>
-                                        <option value="1">Edit</option>
-                                        <option value="2">Delete</option>
-                                        <option value="3">Active</option>
-                                        <option value="4">Inactive</option>
-                                    </select>
-                                    <i class="arrow double"></i>
-                                </label>
-                            </div>
+                            
                             
                             <div class="col-md-5 pb5">
                                 <label class="field select">
                                     <select id="filter-status" name="filter-status">
                                         <option value="0">Filter by Status</option>
                                         <option value="1">Active</option>
-                                        <option value="2">Inactive</option>
                                         <option value="3">Low Stock</option>
                                         <option value="4">Out of Stock</option>
                                     </select>
@@ -911,12 +840,13 @@
                             <table class="table allcp-form theme-warning tc-checkbox-1 fs13">
                                 <thead>
                                 <tr class="bg-light">
-                                    <th class="text-center"></th>
+                                    
                                     <th class="">Image</th>
                                     <th class="">Product Title</th>
                                     <th class="">Price</th>
                                     <th class="">Stock</th>
                                     <th class="text-right">Status</th>
+                                    <th class="text-center"></th>
 
                                 </tr>
                                 </thead>
@@ -932,11 +862,6 @@
                                         
                                             echo 
                                             "<tr>
-                                                <td class='text-center'>
-                                                    <label class='option block mn'>
-                                                        
-                                                    </label>
-                                                </td>
                                                 <td class='w100'>
                                                     <img class='img-responsive mw40 ib mr10' title='user' alt=''
                                                          src='"; echo base_url(); echo "img/store/"; echo $image[$i]; echo "'>
@@ -967,10 +892,22 @@
                                                         
                                                     </div>
                                                 </td>
+                                                <td class='text-center'>
+                                                    
+                                                        <a href='"; echo base_url(); echo "index.php/Store/deleteProduct/$item_id[$i]'><i class='fa fa-trash'></i></a>
+
+                                                </td>
                                             </tr>";
                                         }
                                         
-                                        ?> 
+                                                   
+                                                
+                                                
+                                        ?>
+                                    
+                                    
+
+                                    
                                     
                                 </tbody>
                             </table>

@@ -24,7 +24,7 @@ class Contact extends CI_Controller {
         
     }
 
-    // When user submit data on view page, Then this function store data in array.
+    
     public function submitMessage() 
     {
      

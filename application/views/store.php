@@ -201,7 +201,10 @@ x<!DOCTYPE html>
 
                             </div>
 
-                            <a href='storeProduct' class='pm-square-btn store-btn'>View Details</a>
+                            <form method='' action=";  echo base_url(); echo "Store/showDetails/$i>
+                                <button class = 'pm-square-btn store-btn' id='submit-buttons' type='submit'>View Details</button>
+                            </form>    
+                            
                         </div>
                     </div>";        
                             
@@ -209,6 +212,7 @@ x<!DOCTYPE html>
 
                 ?>
                 <!-- Product end -->
+                
                     
             </div>
         

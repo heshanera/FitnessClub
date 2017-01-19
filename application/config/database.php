@@ -78,19 +78,19 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
     
-    
+    /*
 	'hostname' => 'heysulo.cwzrfls5iwit.us-west-2.rds.amazonaws.com',
 	'username' => 'heysulo',
 	'password' => 'H3LL0W1F1',
 	'database' => 'fitnessclub',
-    
+    */
      
-    /*
+    
         'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'gym',
-    */
+    
     
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
